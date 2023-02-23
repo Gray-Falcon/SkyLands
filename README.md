@@ -8,7 +8,7 @@ Skylands pack is still in the testing stage, and balancing issues and bugs may b
 Skylands was made possible only through the help and support from the PolyhedralDev team, as well as the default Overworld config packaged with Terra, where a lot of edited configs from can be found in various assets in Skylands. You can check out the pack here: https://github.com/PolyhedralDev/TerraOverworldConfig
 
 ## Installing this pack
-Firstly, make sure to place Skylands.zip into your terra pack folder and then EXTRACT it.
+Firstly, make sure to place Skylands.zip into your terra packs folder and then EXTRACT it.
 Secondly, copy-paste this text into your bukkit.yml file:
 
 worlds:
