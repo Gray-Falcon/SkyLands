@@ -1,0 +1,9 @@
+id: ICE_ORE_SNOWFIELDS
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:ice
+
+size: 10
+
+exposed: 1

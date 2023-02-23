@@ -1,0 +1,25 @@
+id: FROSTBOUNDS_DEPTHS
+type: BIOME
+extends: [ FROSTBOUNDS_DEPTHS_TERRAIN, CARVING_LAND ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - FROSTBOUNDS_DEPTHS: 319
+  
+features:
+  ores:
+    - ICE_DIAMOND_ORE_FROSTBOUND_DEPTHS
+    - ICE_LAPIS_ORE_FROSTBOUND_DEPTHS
+    - SMALL_LAPIS_ORE
+    - SMALL_IRON_ORE
+    - SMALL_DIAMOND_ORE
+    - LAPIS_ORE
+    - IRON_ORE
+    - IRON_ORE_VEINS
+
+  features1:
+    - FROSTBOUDS_DEPTHS_ICE_CRYSTAL
+
+  features2:
+    - BOTTOM_STONE
+    - WATER_BARRIER_STONE

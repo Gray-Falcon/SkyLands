@@ -1,0 +1,36 @@
+id: ETERN_WINTERLAND_ICE_CRYSTALS
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 60
+  padding: 1
+  salt: 84795
+
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -50
+        max: 200
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 2
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 5438
+  structures: 
+    - ice_crystal: 3
+    - big_ice_crystal: 2
+    - packed_ice_crystal: 2
+
+  

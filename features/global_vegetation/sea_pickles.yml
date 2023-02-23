@@ -1,0 +1,38 @@
+id: SEA_PICKLES
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 5252
+  threshold: 0.012
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH
+        block: minecraft:water
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:sand
+          - minecraft:dirt
+          - minecraft:gravel
+          - minecraft:clay
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 387
+  structures: 
+    - BLOCK:minecraft:sea_pickle[pickles=1]: 2
+    - BLOCK:minecraft:sea_pickle[pickles=2]: 3
+    - BLOCK:minecraft:sea_pickle[pickles=3]: 2
+    - BLOCK:minecraft:sea_pickle[pickles=4]: 1

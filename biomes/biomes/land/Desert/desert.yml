@@ -1,0 +1,17 @@
+id: DESERT
+type: BIOME
+extends: [ DESERT_TERRAIN ]
+vanilla: minecraft:jungle
+
+palette:
+  - DESERT: 319
+
+features:
+  ores:
+    - DESERT_GRASS
+    - SMALL_GOLD_ORE
+    - SMALL_IRON_ORE
+    - SMOOTH_SANDSTONE_DEPOSIT
+    - SANDSTONE_ROCK
+  features1:
+    - WATER_BARRIER_STONE

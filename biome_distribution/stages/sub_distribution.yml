@@ -1,0 +1,34 @@
+distribution-map: &distribution-map
+  dimensions: 2
+  type: FBM
+  octaves: 2
+  sampler:
+    type: OPEN_SIMPLEX_2
+    salt: 6836
+    frequency: 1 / 50 / 2
+    
+stages:
+  - type: REPLACE_LIST
+    sampler: *distribution-map
+    default-from: SNOWFIELDS
+    default-to:
+        - SELF: 3
+        - SNOWFIELDS_FOREST: 2
+    to:
+      SNOWFIELDS:
+        - SELF: 3
+        - SNOWFIELDS_FOREST: 2
+      ETERN_WINTERLAND:
+        - SELF: 3
+        - ICESPIKES: 2
+        - FROSTFALL_PEAKS: 1
+      JUNGLE:
+        - SELF: 3
+        - RAINFOREST: 2
+        - BAMBOO_JUNGLE: 3
+      OLD_JUNGLE:
+        - SELF: 8
+        - OLD_JUNGLE_BIRCH_FOREST: 3
+      HILLS:
+        - SELF: 2
+        - HILLS_FOREST: 3

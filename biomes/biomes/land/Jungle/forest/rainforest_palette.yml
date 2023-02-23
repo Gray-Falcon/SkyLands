@@ -1,0 +1,37 @@
+id: RAINFOREST
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:grass_block: 8
+      - minecraft:sand: 3
+      - minecraft:clay: 2
+    layers: 1
+  - materials:
+      - minecraft:dirt: 8
+      - minecraft:sand: 3
+      - minecraft:clay: 2
+    layers: 1
+  - materials:
+      - minecraft:dirt: 2
+      - minecraft:stone: 1
+    layers: 1
+  - materials:
+      - minecraft:dirt: 1
+      - minecraft:stone: 2
+    layers: 1
+  - materials:
+      - minecraft:stone: 6
+      - minecraft:cobblestone: 2
+      - minecraft:granite: 1
+    layers: 1
+sampler:
+  dimensions: 2
+  type: DOMAIN_WARP
+  warp:
+    type: WHITE_NOISE
+  sampler:
+    type: CELLULAR
+    frequency: 0.16
+    return: CellValue
+

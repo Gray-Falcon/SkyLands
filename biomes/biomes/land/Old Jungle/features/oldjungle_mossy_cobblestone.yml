@@ -1,0 +1,57 @@
+id: OLD_JUNGLE_MOSSY_COBBLESTONE
+type: FEATURE
+
+# Adds patches of sculk blocks to the ground
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    # Check if block can be replaced with sculk
+    - type: PATTERN
+      range: &range
+        min: 90
+        max: 319
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:stone
+          - minecraft:cobblestone
+        offset: 0
+    # Check if the block is exposed to air
+    - type: OR
+      locators:
+        # If any side faces are air
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH_AIR
+            offset: 0
+        # OR any top / bottom faces are air
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: OR
+            patterns:
+              - type: MATCH_AIR
+                offset: 1
+              - type: MATCH_AIR
+                offset: -1
+
+structures:
+  distribution:
+    dimensions: 3
+    type: LINEAR
+    min: -1
+    max: 0
+    sampler:
+      type: CELLULAR
+      return: Distance2Div
+      frequency: 0.04
+  structures:
+    - BLOCK:minecraft:mossy_cobblestone: 1
+    - blank: 5
+    - BLOCK:minecraft:mossy_cobblestone: 2
+    - blank: 3

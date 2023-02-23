@@ -1,0 +1,6 @@
+SMOOTH_SANDSTONE_DEPOSIT:
+  averageCountPerChunk: 1
+  salt: 2547
+  range:
+    min: -63
+    max: 318

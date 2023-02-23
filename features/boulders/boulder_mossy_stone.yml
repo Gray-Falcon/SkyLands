@@ -1,0 +1,29 @@
+id: BOULDER_MOSSY_STONE
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 28
+      padding: 1
+      salt: 8412
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 2135
+          frequency: 0.04
+      threshold: 0.2
+
+locator:
+  type: SURFACE
+  range:
+    min: 70
+    max: 200
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: boulder_mossy_stone

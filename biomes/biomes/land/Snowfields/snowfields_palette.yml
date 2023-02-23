@@ -1,0 +1,27 @@
+id: SNOWFIELDS
+
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:grass_block[snowy=true]: 6
+      - minecraft:snow_block: 1
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.1
+        return: CellValue
+  - materials:
+      - minecraft:stone: 1
+      - minecraft:dirt: 2
+    layers: 2
+    sampler:
+      type: WHITE_NOISE
+      salt: 5912
+  - materials: minecraft:stone
+    layers: 1

@@ -1,0 +1,32 @@
+id: JUNGLE_MOSS_GRASS
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.25
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+         - minecraft:moss_block
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 4561
+  structures:
+    - tall_grass: 3
+    - BLOCK:minecraft:grass: 9
+    - BLOCK:minecraft:moss_carpet: 2

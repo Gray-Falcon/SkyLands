@@ -1,0 +1,12 @@
+if(getBlock(1, 0, 0) == "minecraft:air"){
+    if(getBlock(-1, 0, 0) == "minecraft:air"){
+        if(getBlock(0, 0, 1) == "minecraft:air"){
+            if(getBlock(0, 0, -1) == "minecraft:air"){
+                num height = randomInt(3) + 1;
+                for(num i = 0; i < height; i = i + 1) {
+                    block(0, i, 0, "minecraft:cactus", false);
+                }
+            }
+        }
+    }
+}

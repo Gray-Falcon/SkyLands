@@ -1,0 +1,33 @@
+id: GRAVITY_BARRIER_DIRT
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -63
+        max: 318
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: OR
+      locators:
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: MATCH_SET
+            blocks:
+              - minecraft:sand
+              - minecraft:gravel
+            offset: 1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: BLOCK:minecraft:dirt
+
+      

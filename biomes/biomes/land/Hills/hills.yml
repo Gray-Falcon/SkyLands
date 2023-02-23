@@ -1,0 +1,19 @@
+id: HILLS
+type: BIOME
+extends: [HILLS_TERRAIN ]
+vanilla: minecraft:plains
+
+palette:
+  - HILLS: 319
+
+features:
+  ores:
+    - SMALL_IRON_ORE
+    - COAL_ORE
+  features1:
+    - OAK_TREE
+  features2:
+    - HILLS_GRASS
+    - WATER_BARRIER_STONE
+
+

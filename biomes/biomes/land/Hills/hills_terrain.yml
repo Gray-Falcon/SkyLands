@@ -1,0 +1,27 @@
+id: HILLS_TERRAIN
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+
+    expression:
+      ((simplex3(x*3, y*1, z*3)*10) - 1 - ( |y-(100+(50*simplex(x*0.1, z*0.1)))| * if((y > (120+(50*simplex(x, z)))), 2, 0.2) ))
+
+    samplers:
+      simplex:
+        dimensions: 2
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.0075
+      simplex3:
+        dimensions: 3
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.0075

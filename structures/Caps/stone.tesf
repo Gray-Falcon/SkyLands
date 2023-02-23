@@ -1,0 +1,36 @@
+num depth = randomInt(5)+1;
+num i = 0;
+if (getBlock(0,-61,0) == "minecraft:air"){
+    fail;
+}
+if (getBlock(0,1,0) == "minecraft:cobblestone"){
+    for ( i; i < depth+randomInt(1); i = i + 1) {
+        if (getBlock(0,-i,0) == "minecraft:stone" || getBlock(0,-i,0) == "minecraft:deepslate"){
+            break;
+        }
+        block(0, -i, 0, "minecraft:cobblestone", true);
+    }
+}
+if (getBlock(0,1,0) == "minecraft:mossy_cobblestone"){
+    for ( i; i < depth+4+randomInt(6); i = i + 1) {
+        if (getBlock(0,-i,0) == "minecraft:stone" || getBlock(0,-i,0) == "minecraft:deepslate"){
+            break;
+        }
+        block(0, -i, 0, "minecraft:mossy_cobblestone", true);
+    }
+}
+if (getBlock(0,1,0) == "minecraft:granite"){
+    for ( i; i < depth+4+randomInt(2); i = i + 1) {
+        if (getBlock(0,-i,0) == "minecraft:stone" || getBlock(0,-i,0) == "minecraft:deepslate"){
+            break;
+        }
+        block(0, -i, 0, "minecraft:granite", true);
+    }
+}
+
+for ( i; i < 60; i = i + 1) {
+    if (getBlock(0,-i,0) == "minecraft:stone" || getBlock(0,-i,0) == "minecraft:deepslate"){
+        break;
+    }
+    block(0, -i, 0, "minecraft:stone", true);
+}

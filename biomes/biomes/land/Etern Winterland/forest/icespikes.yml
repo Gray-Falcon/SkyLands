@@ -1,0 +1,23 @@
+id: ICESPIKES
+type: BIOME
+extends: [ ETERN_WINTERLAND_TERRAIN, CARVING_LAND ]
+vanilla: minecraft:ice_spikes
+
+palette:
+  - ETERN_WINTERLAND: 319
+
+features:
+  ores:
+    - DIAMOND_ORE
+    - LAPIS_ORE
+    - IRON_ORE
+    - COAL_ORE
+    - SMALL_IRON_ORE
+    - SMALL_LAPIS_ORE
+    - LAPIS_ORE_VEINS
+  features1:
+    - ETERN_WINTERLAND_ICE_SPIKES
+  features2:
+    - ETERN_WINTERLAND_ICICLE
+    - ETERN_WINTERLAND_SNOW
+    - WATER_BARRIER_STONE

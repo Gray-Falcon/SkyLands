@@ -1,0 +1,48 @@
+id: AMETHYST_GEODE
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 1
+      padding: 48
+      salt: 2174
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 9332
+          frequency: 0.04
+      threshold: 1
+
+locator:
+  type: AND
+  locators:
+    - type: RANDOM
+      amount: 1
+      height:
+        min: -50
+        max: 300
+      salt: 5844
+    - type: PATTERN
+      range:
+        min: -50
+        max: 300
+      pattern:
+        type: MATCH_SET
+        type: MATCH_SOLID
+        offset: -5
+        blocks:
+          - minecraft:stone
+          - minecraft:deepslate
+          - minecraft:tuff
+        offset: 0
+        type: MATCH_SOLID
+        offset: 5
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: amethyst_geode

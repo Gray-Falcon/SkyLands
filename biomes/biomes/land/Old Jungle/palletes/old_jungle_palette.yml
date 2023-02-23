@@ -1,0 +1,53 @@
+id: OLDJUNGLE
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:air: 1
+      - minecraft:grass_block: 1
+    layers: 1
+    sampler:
+      dimensions: 3
+      type: EXPRESSION
+      expression: |
+        if(y > max, -1,
+        if(y < min,  1,
+        -y + min + (offset(x,y,z)+1)/2*(max+1-min)
+        ))
+      variables:
+        min: 160
+        max: 170
+      samplers:
+        offset:
+          dimensions: 3
+          type: OPEN_SIMPLEX_2
+          frequency: 0.08
+  - materials:
+      - minecraft:dirt: 2
+      - minecraft:stone: 1
+      - minecraft:cobblestone: 1
+      - minecraft:granite: 1
+    layers: 2
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.25
+        return: CellValue
+  - materials:
+      - minecraft:stone: 4
+      - minecraft:cobblestone: 4
+      - minecraft:granite: 2
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.08
+        return: CellValue

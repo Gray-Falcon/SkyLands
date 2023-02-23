@@ -1,0 +1,36 @@
+id: SNOWFIELDS_BUSHES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 24
+  padding: 1
+  salt: 45842
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks: $features/block_types/all_plantable_blocks.yml:plantable-blocks
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 10
+    warp:
+      type: WHITE_NOISE
+      salt: 54884
+    sampler:
+      type: EXPRESSION
+      expression: simplex2(x, z)
+  structures:
+    - berry_bush: 1
+    - spruce_bush: 2

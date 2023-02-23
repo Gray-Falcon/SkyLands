@@ -1,0 +1,46 @@
+id: OAK_TREE
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 32
+      padding: 1
+      salt: 217
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 487
+          frequency: 0.25
+      threshold: 0.9
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: -63
+        max: 302
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:grass_block
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 477
+  structures:
+    - vanillaOak: 3
+    - blank: 1

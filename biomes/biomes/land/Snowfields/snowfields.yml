@@ -1,0 +1,29 @@
+id: SNOWFIELDS
+type: BIOME
+extends: [ SNOWFIELDS_TERRAIN, CARVING_LAND ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - SNOWFIELDS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - SMALL_IRON_ORE
+    - SMALL_LAPIS_ORE
+    - ICE_ORE_SNOWFIELDS
+    - SNOWFIELDS_POWDER_SNOW
+    - BOULDER_ANDESITE
+    - ANDESITE_ROCK
+  features1:
+    - BOTTOM_STONE
+    - SNOWFIELDS_TREES
+    - SNOWFIELDS_SMALL_ICICLE
+    - SNOWFIELDS_TINY_ICICLE
+  features2:
+    - SNOWFIELDS_TREE_SNOW
+    - SNOW
+    - WATER_BARRIER_STONE
+
+tags:
+ - SNOWFIELDS_UNDEREGROUND

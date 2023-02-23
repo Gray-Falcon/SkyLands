@@ -1,0 +1,21 @@
+num randPrecision = 100;
+num radius = randomInt(randPrecision)/randPrecision*2 +1;
+num radiusCeil = ceil(radius);
+num radiusSquared = pow(radius, 2);
+
+for(num x = -radiusCeil; x <= radiusCeil; x = x + 1) {
+    for(num y = 2; y > -2; y = y - 1) {
+        for(num z = -radiusCeil; z <= radiusCeil; z = z + 1) {
+            num distanceSquared = (pow(x,2) + pow(y*3,2) + pow(z,2));
+            if (distanceSquared/radiusSquared < randomInt(randPrecision)/100) {
+                if (getBlock(x,y-1,z) == "minecraft:sand") {
+                    if (getBlock(x,y,z) == "minecraft:air") {
+                        if (0.9 > randomInt(randPrecision)/100) {
+                            block(x, y, z, "minecraft:sandstone_slab");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

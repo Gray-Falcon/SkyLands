@@ -1,0 +1,43 @@
+id: BOULDER_GRANITE
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 28
+      padding: 1
+      salt: 1875
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 5479
+          frequency: 0.04
+      threshold: 0.2
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 75
+        max: 130
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:grass_block
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: tall_boulder_granite

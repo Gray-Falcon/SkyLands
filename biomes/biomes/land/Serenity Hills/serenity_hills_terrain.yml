@@ -1,0 +1,40 @@
+id: SERENITY_HILLS_TERRAIN
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    variables:
+  
+      carvingThreshold: 0.67 # Higher = less carving
+      carvingMinHeight: 70
+      carvingMinTaper: 25
+      carvingMaxHeight: 150
+      carvingMaxTaper: 25
+      carvingCap: 1 # Caps the amount of base carving
+
+      spaghettiStrengthLarge: 0.9
+
+    expression: |
+      -carvingThreshold
+      + if(y<carvingMinHeight||y>carvingMaxHeight,0,maskSmooth(maskSmooth( // Skip unnecessary calculations
+        min(carvingCap,
+          spaghettiStrengthLarge * ((-(|simplex3(x,y+0000,z)|+|simplex3(x,y+1000,z)|)/2)+0.89)
+        ),
+        // Clamp parameters
+        carvingMinHeight, carvingMinHeight + carvingMinTaper, y
+        ),
+        carvingMaxHeight, carvingMaxHeight - carvingMaxTaper, y
+      ))
+    samplers:
+      # Basic 3D simplex noise
+      simplex3:
+        dimensions: 3
+        type: FBM
+        octaves: 2
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.008
+          dimensions: 3

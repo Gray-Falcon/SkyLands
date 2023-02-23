@@ -1,0 +1,37 @@
+id: SNOWFIELDS_TERRAIN
+type: BIOME
+abstract: true 
+
+
+vars: &variables
+
+  base: 120
+  range: 50
+
+  yScaleIsland: 3.2
+  yDifference: 1
+  connectivity: 2
+
+  upperResolution: 0.7
+  loverResolution: 0.2
+
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      ((SnowyTundra3D(x*3, y*yDifference, z*3)*yScaleIsland) + connectivity - ( |y-(base+(range*SnowyTundra2D(x*0.1, z*0.1)))| * if((y > (base+(range*SnowyTundra2D(x, z)))), upperResolution, loverResolution) ))
+
+    variables: *variables
+    samplers:
+      SnowyTundra3D:
+        octaves: 4
+        dimensions: 3
+        type: OPEN_SIMPLEX_2
+        frequency: 0.001
+      SnowyTundra2D:
+        octaves: 4
+        dimensions: 2
+        type: OPEN_SIMPLEX_2
+        frequency: 0.008

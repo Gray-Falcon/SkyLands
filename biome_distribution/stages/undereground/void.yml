@@ -1,0 +1,13 @@
+extrusions:
+  - type: REPLACE
+    from: VOIDED
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 7384
+      frequency: 0.005
+    to:
+      - VOID: 1
+    range:
+      min: -60
+      max: 60

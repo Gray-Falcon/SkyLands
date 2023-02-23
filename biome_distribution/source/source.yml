@@ -1,0 +1,38 @@
+source:
+  type: SAMPLER
+  biomes:
+    - VOID: 2
+    - DESERT: 4
+    - VOID: 2
+    - JUNGLE_VOID: 2
+    - JUNGLE: 3
+    - OLD_JUNGLE: 4
+    - JUNGLE: 3
+    - JUNGLE_VOID: 2
+    - VOID: 2
+    - HILLS_VOID: 2
+    - HILLS: 6
+    - HILLS_VOID: 2
+    - VOID: 2
+    - SERENITY_HILLS: 3
+    - VOID: 2
+    - SERENITY_PEAKS: 4
+    - VOID: 2
+    - SNOWFIELDS_VOID: 2
+    - SNOWFIELDS: 6
+    - SNOWFIELDS_VOID: 2
+    - VOID: 2
+    - ETERN_WINTERLAND: 6
+  sampler:
+    dimensions: 2
+    type: LINEAR
+    min: -1
+    max: -0.65
+    sampler:
+      type: FBM
+      lacunarity: 3
+      gain: 0.4
+      octaves: 10
+      sampler:
+        type: CELLULAR
+        frequency: 0.0004

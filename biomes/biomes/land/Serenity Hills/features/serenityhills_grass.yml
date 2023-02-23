@@ -1,0 +1,32 @@
+id: SERENITY_HILLS_GRASS
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.15
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH
+        block: minecraft:grass_block
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 4561
+  structures:
+    - BLOCK:minecraft:poppy: 8
+    - BLOCK:minecraft:dandelion: 8
+    - BLOCK:minecraft:allium: 16
+    - BLOCK:minecraft:grass: 60

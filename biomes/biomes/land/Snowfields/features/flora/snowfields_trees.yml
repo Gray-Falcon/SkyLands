@@ -1,0 +1,36 @@
+id: SNOWFIELDS_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 82
+  padding: 1
+  salt: 441580
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_SET
+        blocks:
+          - minecraft:coarse_dirt
+          - minecraft:dirt
+          - minecraft:stone
+        offset: -2
+      - type: MATCH_SET
+        blocks: $features/block_types/plantable_blocks.yml:plantable-blocks
+        offset: -1
+      - type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 4538
+  structures: 
+    - spruce_tree: 3
+    - large_spruce_tree: 1

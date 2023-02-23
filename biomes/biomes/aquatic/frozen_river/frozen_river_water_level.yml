@@ -1,0 +1,12 @@
+id: FROZEN_RIVER_WATER_LEVEL
+type: BIOME
+abstract: true
+
+slant-depth: 15
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 63
+features:
+  features1:
+    - CONTAIN_WATER_BLUEICE

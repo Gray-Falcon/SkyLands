@@ -1,0 +1,25 @@
+id: FROSTFALL_PEAKS
+type: BIOME
+extends: [ ETERN_WINTERLAND_TERRAIN, CARVING_LAND ]
+vanilla: minecraft:ice_spikes
+
+palette:
+  - ETERN_WINTERLAND: 319
+
+features:
+  ores:
+    - DIAMOND_ORE
+    - LAPIS_ORE
+    - IRON_ORE
+    - COAL_ORE
+    - SMALL_IRON_ORE
+    - SMALL_LAPIS_ORE
+    - LAPIS_ORE_VEINS
+    - ETERNWINTERLAND_POWDERSNOW
+  features1:
+    - ETERN_WINTERLAND_ICICLE
+    - BOULDER_FLAT_DRIPPSTONE
+  features2:
+    - ETERN_WINTERLAND_DRIPPSTONE
+    - WATER_BARRIER_STONE
+

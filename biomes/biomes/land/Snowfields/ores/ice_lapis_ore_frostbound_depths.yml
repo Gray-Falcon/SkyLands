@@ -1,0 +1,27 @@
+id: ICE_LAPIS_ORE_FROSTBOUND_DEPTHS
+type: FEATURE
+
+anchors:
+  - &structure
+    ICE_LAPIS_ORE_FROSTBOUND_DEPTHS: 1
+  - &densityThreshold 1/256 * ${biomes/biomes/distribution.yml:ICE_LAPIS_ORE_FROSTBOUND_DEPTHS.averageCountPerChunk}
+  - &salt $biomes/biomes/distribution.yml:ICE_LAPIS_ORE_FROSTBOUND_DEPTHS.salt
+  - &range $biomes/biomes/distribution.yml:ICE_LAPIS_ORE_FROSTBOUND_DEPTHS.range
+  - &standard-deviation (${biomes/biomes/distribution.yml:ICE_LAPIS_ORE_FROSTBOUND_DEPTHS.range.max}-${biomes/biomes/distribution.yml:ICE_LAPIS_ORE_FROSTBOUND_DEPTHS.range.min})/6
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: *salt
+  threshold: *densityThreshold
+
+locator:
+  type: GAUSSIAN_RANDOM
+  amount: 1
+  height: *range
+  standard-deviation: *standard-deviation
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: *structure

@@ -1,0 +1,29 @@
+id: SANDSTONE_ROCK
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 32
+      padding: 1
+      salt: 168
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 214
+          frequency: 0.04
+      threshold: 0.4
+
+locator:
+  type: SURFACE
+  range:
+    min: 70
+    max: 200
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: sandstone_rock

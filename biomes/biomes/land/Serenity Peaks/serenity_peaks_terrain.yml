@@ -1,0 +1,53 @@
+id: SERENITY_PEAKS_TERRAIN
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+        if((y > 100), if((y < 150), simplex3De(x, terraceStrata(y, 12, 0, 0, 0.85), z)-0.6 , 0) , 0)
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      -1+threshold+
+      lerp(y, max, 0, max-taper,
+        max(
+          lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+            simplex3(x, terraceStrata(y, 12, 0, 0, 0.85)*flatness, z)
+          ),
+          lerp(y, min, 0, min+taper,
+            simplex3(x, (terraceStrata(y, 12, 0, 0, 0.85)-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+          )
+        )
+      )
+    variables:
+      threshold: 0.4
+      max: 180
+      min: 120
+      taper: 40
+      flatness: 2
+      undercarriageTranslate: 130
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.002 / 1
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.005 / 1
+        

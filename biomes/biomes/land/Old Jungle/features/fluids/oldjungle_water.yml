@@ -1,0 +1,24 @@
+id: OLD_JUNGLE_WATER
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 1
+
+locator:
+  type: PATTERN
+  range:
+    min: 100
+    max: 110
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: BLOCK:minecraft:water

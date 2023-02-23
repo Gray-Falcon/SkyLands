@@ -1,0 +1,9 @@
+id: ICE_LAPIS_ORE_FROSTBOUND_DEPTHS
+type: ORE
+extends: OVERWRITE_FROSTBOUND_DEPTHS
+
+material: minecraft:lapis_ore
+
+size: 3
+
+exposed: 0.2

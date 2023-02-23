@@ -1,0 +1,18 @@
+biomes:
+  type: EXTRUSION
+  extrusions:
+    - << biome_distribution/stages/undereground/void.yml:extrusions 
+    - << biome_distribution/stages/undereground/snowfields_undereground.yml:extrusions 
+    - << biome_distribution/stages/undereground/old_jungle_undereground.yml:extrusions 
+  provider:
+    type: PIPELINE
+    resolution: 2
+    initial-size: 10
+    blend:
+      sampler:
+        type: CONSTANT
+    pipeline:
+      source: $biome_distribution/source/source.yml:source
+
+      stages:
+        - << biome_distribution/stages/sub_distribution.yml:stages

@@ -1,0 +1,10 @@
+id: MAGMA_CAVERNS
+type: BIOME
+extends: [ SNOWFIELDS_TERRAIN ]
+vanilla: minecraft:basalt_deltas
+
+palette:
+  - MAGMA_CAVERNS: 319  
+features:
+  flora:
+    - MAGMA_CAVE_LAVA_POOLS

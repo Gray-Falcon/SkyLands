@@ -1,0 +1,7 @@
+id: OVERWRITE_TOP
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:dirt
+  - minecraft:grass_block

@@ -1,0 +1,17 @@
+block(0, 0, 0, "minecraft:stone", false);
+
+// Random chance of placing adjacent blocks
+if (randomInt(2) == 0) block( 1,  0,  0, "minecraft:stone", false);
+if (randomInt(2) == 0) block(-1,  0,  0, "minecraft:stone", false);
+if (randomInt(2) == 0) block( 0, -1,  0, "minecraft:stone", false);
+if (randomInt(2) == 0) block( 0,  0,  1, "minecraft:stone", false);
+if (randomInt(2) == 0) block( 0,  0, -1, "minecraft:stone", false);
+
+// Chance to place a hanging strand of leaves
+if (randomInt(10) == 0) {
+    num length = randomInt(3);
+    for (num i = 0; i < length; i = i + 1) {
+        if (check(0, -i, 0) == "LAND") break;
+        block(0, -i, 0, "minecraft:stone", false);
+    }
+}

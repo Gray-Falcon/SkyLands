@@ -1,0 +1,29 @@
+id: OLD_JUNGLE_WATERSPRING
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 6617
+  threshold: 0.0001
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_SET
+        blocks:
+          - minecraft:granite
+        offset: 0
+      - type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: waterspring

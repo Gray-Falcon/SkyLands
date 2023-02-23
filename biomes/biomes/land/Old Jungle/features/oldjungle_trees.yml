@@ -1,0 +1,47 @@
+id: OLD_JUNGLE_TREES
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 4
+      padding: 1
+      salt: 4602
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 2101
+          frequency: 0.25
+      threshold: 0.3
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 120
+        max: 170
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:grass_block
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH
+        block: minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 541
+  structures:
+    - vanillaOak: 3
+    - jungle_tree: 1
+    - blank: 5

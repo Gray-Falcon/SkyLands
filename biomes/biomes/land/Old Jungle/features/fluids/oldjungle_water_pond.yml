@@ -1,0 +1,29 @@
+id: OLD_JUNGLE_WATER_POND
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 10
+      padding: 1
+      salt: 45
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 578
+          frequency: 0.04
+      threshold: 0.3
+
+locator:
+  type: SURFACE
+  range:
+    min: -64
+    max: 319
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: calcite_water_pond

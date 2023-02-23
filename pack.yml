@@ -1,0 +1,54 @@
+id: SKYLANDS
+version: 0.1.0
+author: Falcon
+
+generator: NOISE_3D
+
+addons:
+  biome-provider-pipeline-v2: "1.+"
+  biome-provider-single: "1.+"
+  biome-provider-extrusion: "1.+"
+  chunk-generator-noise-3d: "1.+"
+  config-biome: "1.+"
+  config-flora: "1.+"
+  config-noise-function: "1.+"
+  config-ore: "1.+"
+  config-palette: "1.+"
+  config-distributors: "1.+"
+  config-locators: "1.+"
+  config-feature: "1.+"
+  structure-terrascript-loader: "1.+"
+  structure-sponge-loader: "1.+"
+  language-yaml: "1.+"
+  generation-stage-feature: "1.+"
+  structure-function-check-noise-3d: "1.+"
+  palette-block-shortcut: "1.+"
+  structure-block-shortcut: "1.+"
+  terrascript-function-sampler: "1.+"
+  
+biomes: $biome_distribution/biome_distribution.yml:biomes
+
+stages:
+  - id: ores
+    type: FEATURE
+  - id: features1
+    type: FEATURE
+  - id: features2
+    type: FEATURE
+    
+samplers:
+  "<<":
+    - samplers/samplers.yml:samplers
+    
+functions:
+  "<<":
+    - functions/terrace.yml:functions
+    - functions/lerp.yml:functions
+    - functions/maskSmooth.yml:functions
+    
+blend:
+  palette:
+    resolution: 2
+    amplitude: 2
+    sampler:
+      type: WHITE_NOISE

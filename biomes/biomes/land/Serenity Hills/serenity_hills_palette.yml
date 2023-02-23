@@ -1,0 +1,35 @@
+id: SERENITY_HILLS
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:diorite: 3
+      - minecraft:grass_block: 2
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.08
+        return: CellValue
+  - materials:
+      - minecraft:diorite: 3
+      - minecraft:dirt: 2
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.08
+        return: CellValue
+  - materials:
+      - minecraft:diorite: 1
+    layers: 1
+
+

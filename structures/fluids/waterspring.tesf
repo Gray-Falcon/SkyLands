@@ -1,0 +1,24 @@
+for (num i = -64; i < 319; i = i + 1) {
+    if(getBlock(0, i, 0) == "minecraft:frosted_ice") {
+        fail;
+    }
+}
+if(getBlock(1, 0, 0) == "minecraft:air") {
+    block(1, 0, 0, "minecraft:torch");
+    block(0, 0, 0, "minecraft:frosted_ice[age=3]");
+} else {
+    if(getBlock(-1, 0, 0) == "minecraft:air") {
+        block(-1, 0, 0, "minecraft:torch");
+        block(0, 0, 0, "minecraft:frosted_ice[age=3]");
+    } else {
+        if(getBlock(0, 0, 1) == "minecraft:air") {
+            block(0, 0, 1, "minecraft:torch");
+            block(0, 0, 0, "minecraft:frosted_ice[age=3]");
+        } else {
+            if(getBlock(0, 0, -1) == "minecraft:air") {
+                block(0, 0, -1, "minecraft:torch");
+                block(0, 0, 0, "minecraft:frosted_ice[age=3]");
+            }
+        }
+    }
+}

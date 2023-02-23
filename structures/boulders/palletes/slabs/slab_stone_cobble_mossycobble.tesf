@@ -1,0 +1,4 @@
+num blockSelection = randomInt(1000)/1000;
+if (blockSelection <= 0.4) block(0, 0, 0,"minecraft:stone_slab");
+else if (blockSelection <= 0.7) block(0, 0, 0,"minecraft:mossy_cobblestone_slab");
+else block(0, 0, 0,"minecraft:cobblestone_slab");

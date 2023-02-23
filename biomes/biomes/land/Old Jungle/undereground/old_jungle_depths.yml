@@ -1,0 +1,27 @@
+id: OLD_JUNGLE_DEPTHS
+type: BIOME
+extends: [ OLD_JUNGLE_TERRAIN, CARVING_LAND  ]
+vanilla: minecraft:deep_dark
+
+palette:
+  - OLDJUNGLE_TRANSITION: 319
+
+features:
+  ores:
+    - SMALL_EMERALD_ORE
+    - SMALL_DIAMOND_ORE
+    - SMALL_GOLD_ORE
+    - SMALL_IRON_ORE
+    - EMERALD_ORE
+    - IRON_ORE
+    - COPPER_ORE
+    - COAL_ORE
+    - OLD_JUNGLE_DIAMOND_ORE
+    - OLD_JUNGLE_SMALL_DIAMOND_ORE
+  features1:
+    - OLD_JUNGLE_SCULK_WEBS
+    - OLD_JUNGLE_SCULK_PATCHES
+    - SCULK_TENDRIL
+  features2:
+    - OLD_JUNGLE_HANGING_SCULK
+    - OLD_JUNGLE_SCULK_FLORA

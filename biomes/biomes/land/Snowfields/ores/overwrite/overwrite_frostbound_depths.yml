@@ -1,0 +1,7 @@
+id: OVERWRITE_FROSTBOUND_DEPTHS
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:ice
+  - minecraft:packed_ice

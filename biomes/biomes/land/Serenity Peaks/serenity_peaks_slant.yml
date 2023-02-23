@@ -1,0 +1,9 @@
+id: SERENITY_PEAKS_SLANT
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:diorite: 1
+    layers: 1
+
+

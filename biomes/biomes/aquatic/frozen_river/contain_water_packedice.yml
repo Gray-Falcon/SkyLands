@@ -1,0 +1,39 @@
+id: CONTAIN_WATER_BLUEICE
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: 0
+        max: 64
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: OR
+      locators:
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:water
+            offset: 1
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:water
+            offset: 0
+
+structures:
+  distribution:
+    type: OPEN_SIMPLEX_2
+    salt: 5187
+  structures:
+    - BLOCK:minecraft:packed_ice: 3
+    - BLOCK:minecraft:ice: 5
+      

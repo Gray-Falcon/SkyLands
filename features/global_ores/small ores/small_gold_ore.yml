@@ -1,0 +1,27 @@
+id: SMALL_GOLD_ORE
+type: FEATURE
+
+anchors:
+  - &structure
+    SMALL_GOLD_ORE: 1
+  - &densityThreshold 1/256 * ${features/global_ores/distribution.yml:SMALL_GOLD_ORE.averageCountPerChunk}
+  - &salt $features/global_ores/distribution.yml:SMALL_GOLD_ORE.salt
+  - &range $features/global_ores/distribution.yml:SMALL_GOLD_ORE.range
+  - &standard-deviation (${features/global_ores/distribution.yml:SMALL_GOLD_ORE.range.max}-${features/global_ores/distribution.yml:SMALL_GOLD_ORE.range.min})/6
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: *salt
+  threshold: *densityThreshold
+
+locator:
+  type: GAUSSIAN_RANDOM
+  amount: 1
+  height: *range
+  standard-deviation: *standard-deviation
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: *structure

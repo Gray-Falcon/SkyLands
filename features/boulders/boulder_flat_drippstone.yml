@@ -1,0 +1,31 @@
+id: BOULDER_FLAT_DRIPPSTONE
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 2154
+  threshold: 0.025
+
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -50
+        max: 200
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: boulder_flat_drippstone

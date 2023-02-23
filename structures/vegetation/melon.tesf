@@ -1,0 +1,16 @@
+num melons = randomInt(5) + 3;
+
+for(num p = 0; p < melons; p = p + 1) {
+
+  num theta = randomInt(360) * 3.14159/180;
+  num r = 5-randomInt(randomInt(6)+1);
+  num x = cos(theta)*r;
+  num z = sin(theta)*r;
+  for(num y = 6; y > -6; y = y - 1) {
+    if(getBlock(x,y - 1,z) == "minecraft:grass_block") {
+      if(getBlock(x,y,z) == "minecraft:air") {
+        block(x,y,z,"minecraft:melon");
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+id: CALCITE_SPIKE
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 599
+  threshold: 0.001
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    amount: 1
+    patterns:
+      - type: MATCH_AIR
+        offset: 1
+      - type: MATCH
+        block: minecraft:calcite
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: calcite_spike

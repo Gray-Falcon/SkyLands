@@ -1,0 +1,7 @@
+id: OVERWRITE_SNOWFIELDS
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:grass_block
+  - minecraft:coarse_dirt

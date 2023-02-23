@@ -1,0 +1,14 @@
+extrusions:
+  - type: REPLACE
+    from: SNOWFIELDS_UNDEREGROUND
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 7384
+      frequency: 0.005
+    to:
+      - FROSTBOUNDS_DEPTHS: 1
+      - VOID: 3
+    range:
+      min: -60
+      max: 60

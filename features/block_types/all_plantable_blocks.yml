@@ -1,0 +1,4 @@
+plantable-blocks:
+  - minecraft:grass_block[snowy=false]
+  - minecraft:podzol
+  - minecraft:coarse_dirt

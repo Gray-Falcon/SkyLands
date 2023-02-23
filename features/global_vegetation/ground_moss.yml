@@ -1,0 +1,40 @@
+id: GROUND_MOSS
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.08
+
+locator: 
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:moss_block
+          - minecraft:stone
+          - minecraft:cobblestone
+          - minecraft:mossy_cobblestone
+          - minecraft:granite
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 10
+    warp:
+      type: WHITE_NOISE
+      salt: 465
+    sampler:
+      type: EXPRESSION
+      expression: simplex2(x, z)
+  structures:
+    - BLOCK:minecraft:moss_carpet: 1

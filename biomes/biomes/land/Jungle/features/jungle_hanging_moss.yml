@@ -1,0 +1,38 @@
+id: JUNGLE_HANGING_MOSS
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.4
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:mossy_cobblestone
+          - minecraft:moss_block
+        offset: 1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 10
+    warp:
+      type: WHITE_NOISE
+      salt: 847
+    sampler:
+      type: EXPRESSION
+      expression: simplex2(x, z)
+  structures:
+    - hanging_moss: 3
+    - blank: 1

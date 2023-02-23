@@ -1,0 +1,33 @@
+id: JUNGLETOP
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:grass_block: 5
+      - minecraft:moss_block: 1
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.1
+        return: CellValue
+
+  - materials:
+      - minecraft:stone: 5
+      - minecraft:cobblestone: 2
+      - minecraft:mossy_cobblestone: 5
+      - minecraft:granite: 3
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.1
+        return: CellValue

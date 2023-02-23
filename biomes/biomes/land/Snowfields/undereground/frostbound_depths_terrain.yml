@@ -1,0 +1,77 @@
+id: FROSTBOUNDS_DEPTHS_TERRAIN
+type: BIOME
+abstract: true 
+
+
+vars: &variables
+
+  base: 120
+  range: 50
+
+  yScaleIsland: 3.2
+  yDifference: 1
+  connectivity: 2
+
+  upperResolution: 0.7
+  loverResolution: 0.2
+
+  threshold: 0.6
+  max: 60
+  min: -60
+  taper: 50
+  flatness: 0.1
+  undercarriageTranslate: -50
+
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      max(
+        ((SnowyTundra3D(x*3, y*yDifference, z*3)*yScaleIsland) + connectivity - ( |y-(base+(range*SnowyTundra2D(x*0.1, z*0.1)))| * if((y > (base+(range*SnowyTundra2D(x, z)))), upperResolution, loverResolution) )),
+        -1+threshold+
+        lerp(y, max, 0, max-taper,
+          max(
+            lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+              simplex3(x, y*flatness, z)
+            ),
+            lerp(y, min, 0, min+taper,
+              simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+            )
+          )
+        )
+      )
+
+    variables: *variables
+    samplers:
+      SnowyTundra3D:
+        octaves: 4
+        dimensions: 3
+        type: OPEN_SIMPLEX_2
+        frequency: 0.001
+      SnowyTundra2D:
+        octaves: 4
+        dimensions: 2
+        type: OPEN_SIMPLEX_2
+        frequency: 0.008
+
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.005 / 1
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.007 / 1

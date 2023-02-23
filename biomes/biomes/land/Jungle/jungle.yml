@@ -1,0 +1,35 @@
+id: JUNGLE
+type: BIOME
+extends: [ JUNGLE_TERRAIN ]
+vanilla: minecraft:jungle
+
+palette:
+  - JUNGLETOP: 319
+  - JUNGLE: 125
+  - JUNGLEBOTTOM: 90
+
+features:
+  ores:
+    - COPPER_ORE_VEINS
+    - BOULDER_GRANITE
+    - JUNGLE_POOL
+    - GRANITE_ROCK
+    - BOULDER_MOSSY_STONE
+    - AMETHYST_GEODE
+  features1:
+    - CROSSING_VINES
+    - JUNGLE_TREES
+    - JUNGLE_BUSHES
+    - JUNGLE_MELON
+    - JUNGLE_GRASS
+    - JUNGLE_WATERSPRING
+  features2:
+    - SUGAR_CANE
+    - GROUND_MOSS
+    - JUNGLE_MOSS_GRASS
+    - SMALL_EMERALD_ORE
+    - SMALL_COPPER_ORE
+    - COPPER_ORE
+    - IRON_ORE
+    - COAL_ORE
+    - WATER_BARRIER_STONE

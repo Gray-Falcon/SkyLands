@@ -1,0 +1,28 @@
+id: SERENITY_HILLS
+type: BIOME
+extends: [SERENITY_HILLS_TERRAIN ]
+vanilla: minecraft:plains
+
+colors:
+  foliage: 0xff6a19
+
+palette:
+  - SERENITY_HILLS: 319
+
+features:
+  ores:
+    - SMALL_EMERALD_ORE
+    - SMALL_DIAMOND_ORE
+    - SMALL_LAPIS_ORE
+    - SMALL_GOLD_ORE
+    - SMALL_IRON_ORE
+    - COAL_ORE
+    - DIORITE_WATER_POND
+  features1:
+    - SMALL_BIRCH_FOREST
+    - SMALL_OAK_FOREST
+  features2:
+    - SERENITY_HILLS_GRASS
+    - WATER_BARRIER_STONE
+
+

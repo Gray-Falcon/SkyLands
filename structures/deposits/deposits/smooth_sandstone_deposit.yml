@@ -1,0 +1,9 @@
+id: SMOOTH_SANDSTONE_DEPOSIT
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:smooth_sandstone
+
+size: 80
+
+exposed: 1

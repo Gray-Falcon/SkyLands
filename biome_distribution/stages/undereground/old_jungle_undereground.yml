@@ -1,0 +1,17 @@
+extrusions:
+  - type: REPLACE
+    from: OLD_JUNGLE_UNDEREGROUND
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 7384
+      frequency: 0.002
+    to:
+      - SELF: 1
+      - OLD_JUNGLE_DEPTHS: 1
+      - OLD_JUNGLE_GRANITE_DEPTHS: 3
+      - OLD_JUNGLE_CRYSTAL_CAVE: 1
+      - OLD_JUNGLE_CRYSTAL_LAKE_CAVE: 1
+    range:
+      min: -60
+      max: 90

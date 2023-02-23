@@ -1,0 +1,9 @@
+id: ICE_DEPOSIT
+type: ORE
+extends: OVERWRITE_SNOWFIELDS
+
+material: minecraft:ice
+
+size: 160
+
+exposed: 1

@@ -1,0 +1,12 @@
+str blockID = "minecraft:amethyst_cluster";
+str blockIDFin = "[facing=lol]";
+if (getBlock(0, 1, 0) == "minecraft:budding_amethyst" || getBlock(0, 1, 0) == "minecraft:amethyst_block") blockIDFin = "[facing=down]";
+if (getBlock(0, 0, -1) == "minecraft:budding_amethyst" || getBlock(0, 0, -1) == "minecraft:amethyst_block") blockIDFin = "[facing=south]";
+if (getBlock(1, 0, 0) == "minecraft:budding_amethyst" || getBlock(-1, 0, 0) == "minecraft:amethyst_block") blockIDFin = "[facing=east]";
+if (getBlock(0, 0, 1) == "minecraft:budding_amethyst" || getBlock(0, 0, 1) == "minecraft:amethyst_block") blockIDFin = "[facing=north]";
+if (getBlock(-1, 0, 0) == "minecraft:budding_amethyst" || getBlock(1, 0, 0) == "minecraft:amethyst_block") blockIDFin = "[facing=west]";
+
+if (getBlock(0, -1, 0) == "minecraft:budding_amethyst" || getBlock(0, -1, 0) == "minecraft:amethyst_block") blockIDFin = "[facing=up]";
+
+str placedBlock = blockID + blockIDFin;
+block(0, 0, 0, placedBlock, false);

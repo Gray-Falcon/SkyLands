@@ -1,0 +1,72 @@
+SMALL_EMERALD_ORE:
+  averageCountPerChunk: 120
+  salt: 1547
+  range:
+    min: -63
+    max: 318
+SMALL_DIAMOND_ORE:
+  averageCountPerChunk: 40
+  salt: 1547
+  range:
+    min: -63
+    max: 318
+SMALL_LAPIS_ORE:
+  averageCountPerChunk: 60
+  salt: 2814
+  range:
+    min: -63
+    max: 318
+SMALL_GOLD_ORE:
+  averageCountPerChunk: 60
+  salt: 8542
+  range:
+    min: -63
+    max: 318
+SMALL_IRON_ORE:
+  averageCountPerChunk: 70
+  salt: 1853
+  range:
+    min: -63
+    max: 318
+SMALL_COPPER_ORE:
+  averageCountPerChunk: 70
+  salt: 1841
+  range:
+    min: -63
+    max: 318
+EMERALD_ORE:
+  averageCountPerChunk: 50
+  salt: 5845
+  range:
+    min: -63
+    max: 318
+DIAMOND_ORE:
+  averageCountPerChunk: 20
+  salt: 5845
+  range:
+    min: -63
+    max: 318
+LAPIS_ORE:
+  averageCountPerChunk: 30
+  salt: 9381
+  range:
+    min: -63
+    max: 318
+IRON_ORE:
+  averageCountPerChunk: 35
+  salt: 4833
+  range:
+    min: -63
+    max: 318
+COPPER_ORE:
+  averageCountPerChunk: 20
+  salt: 7743
+  range:
+    min: -63
+    max: 318
+COAL_ORE:
+  averageCountPerChunk: 1.8
+  salt: 1831
+  range:
+    min: -63
+    max: 318

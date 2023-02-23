@@ -1,0 +1,36 @@
+ICE_ORE_SNOWFIELDS:
+  averageCountPerChunk: 30
+  salt: 1121
+  range:
+    min: -63
+    max: 318
+ICE_DIAMOND_ORE_FROSTBOUND_DEPTHS:
+  averageCountPerChunk: 7
+  salt: 1221
+  range:
+    min: -63
+    max: 60
+ICE_LAPIS_ORE_FROSTBOUND_DEPTHS:
+  averageCountPerChunk: 22
+  salt: 1347
+  range:
+    min: -63
+    max: 60
+OLD_JUNGLE_DIAMOND_ORE:
+  averageCountPerChunk: 6
+  salt: 1489
+  range:
+    min: -63
+    max: -20
+OLD_JUNGLE_SMALL_DIAMOND_ORE:
+  averageCountPerChunk: 10
+  salt: 1157
+  range:
+    min: -63
+    max: 90
+OLD_JUNGLE_ORES:
+  averageCountPerChunk: 24
+  salt: 1457
+  range:
+    min: -63
+    max: 90

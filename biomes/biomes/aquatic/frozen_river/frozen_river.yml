@@ -1,0 +1,7 @@
+id: FROZEN_RIVER
+type: BIOME
+extends: [ FROZEN_RIVER_TERRAIN, FROZEN_RIVER_WATER_LEVEL ]
+vanilla: minecraft:the_void
+
+palette:
+  - BLOCK:minecraft:air: 319

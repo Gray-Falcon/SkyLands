@@ -1,0 +1,30 @@
+id: SNOW
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: WHITE_NOISE
+    salt: 1
+  threshold: 1
+
+locator:
+  type: AND
+  locators:
+    - type: SURFACE
+      range: &range
+        min: -63
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/block_types/snowable_blocks.yml:snowable-blocks
+        offset: -1
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - BLOCK:minecraft:snow: 8
+    - 2snow: 1

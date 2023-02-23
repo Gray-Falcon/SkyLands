@@ -1,0 +1,34 @@
+id: OLD_JUNGLE_ORES
+type: FEATURE
+
+anchors:
+  - &densityThreshold 1/256 * ${biomes/biomes/distribution.yml:OLD_JUNGLE_ORES.averageCountPerChunk}
+  - &salt $biomes/biomes/distribution.yml:OLD_JUNGLE_ORES.salt
+  - &range $biomes/biomes/distribution.yml:OLD_JUNGLE_ORES.range
+  - &standard-deviation (${biomes/biomes/distribution.yml:OLD_JUNGLE_ORES.range.max}-${biomes/biomes/distribution.yml:OLD_JUNGLE_ORES.range.min})/6
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: *salt
+  threshold: *densityThreshold
+
+locator:
+  type: GAUSSIAN_RANDOM
+  amount: 1
+  height: *range
+  standard-deviation: *standard-deviation
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+    salt: 4756
+  structures:
+    - SMALL_EMERALD_ORE: 3
+    - SMALL_DIAMOND_ORE: 2
+    - SMALL_GOLD_ORE: 3
+    - SMALL_IRON_ORE: 4
+    - EMERALD_ORE: 1
+    - DIAMOND_ORE: 1
+    - GOLD_ORE: 2
+    - IRON_ORE: 2

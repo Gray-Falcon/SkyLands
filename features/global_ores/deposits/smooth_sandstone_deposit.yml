@@ -1,0 +1,27 @@
+id: SMOOTH_SANDSTONE_DEPOSIT
+type: FEATURE
+
+anchors:
+  - &structure
+    SMOOTH_SANDSTONE_DEPOSIT: 1
+  - &densityThreshold 1/256 * ${features/global_ores/distribution_deposits.yml:SMOOTH_SANDSTONE_DEPOSIT.averageCountPerChunk}
+  - &salt $features/global_ores/distribution_deposits.yml:SMOOTH_SANDSTONE_DEPOSIT.salt
+  - &range $features/global_ores/distribution_deposits.yml:SMOOTH_SANDSTONE_DEPOSIT.range
+  - &standard-deviation (${features/global_ores/distribution_deposits.yml:SMOOTH_SANDSTONE_DEPOSIT.range.max}-${features/global_ores/distribution_deposits.yml:SMOOTH_SANDSTONE_DEPOSIT.range.min})/6
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: *salt
+  threshold: *densityThreshold
+
+locator:
+  type: GAUSSIAN_RANDOM
+  amount: 1
+  height: *range
+  standard-deviation: *standard-deviation
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: *structure
