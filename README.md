@@ -8,15 +8,14 @@ Skylands pack is still in the testing stage, and balancing issues and bugs may b
 Skylands was made possible only through the help and support from the PolyhedralDev team, as well as the default Overworld config packaged with Terra, where a lot of edited configs from can be found in various assets in Skylands. You can check out the pack here: https://github.com/PolyhedralDev/TerraOverworldConfig
 
 ## Installing this pack
-Firstly, make sure to place Skylands.zip into your terra packs folder and then EXTRACT it.
-Secondly, copy-paste this text into your bukkit.yml file:
+https://terra.polydev.org/config/pack-installation.html
 
 worlds:
   world:
     generator: Terra:SKYLANDS
 
 ## Minor Pack Configuration
-Currently, this pack isn't the most flexible to modify. Options such as changing the biome size, etc will hopefully be implemented in the future.
+The process of installing Skylands is very similar to how you would normally install a pack (you can find instructions on how to do that [here](https://github.com/JaddotWuzHere/Hydraxia/wiki). However, instead of using the ID OVERWORLD, simply replace it with SKYLANDS
 
 ## Bugs and Features
-I will do my best to fix bugs and add more features. 
+Im hardly working on this!
