@@ -1,0 +1,28 @@
+num y = 0;
+for(num x = -2; x<2; x=x+1){
+    for(num z = -2; z<2; z=z+1){
+        if(getBlock(x,-1,z) == "minecraft:air" || getBlock(x,-1,z) == "minecraft:water"){
+            if(getBlock(x,-2,z) == "minecraft:air" || getBlock(x,-2,z) == "minecraft:water" ){
+                fail;
+            }
+            y = -1;
+        }   
+    }
+}
+
+num rgn = randomInt(5);
+if(rgn == 1){
+    structure(0,y,0,"dark_oak1", "NONE","CW_90", "CCW_90", "CW_180");
+}
+if(rgn == 2){
+    structure(0,y,0,"dark_oak2", "NONE","CW_90", "CCW_90", "CW_180");
+}
+if(rgn == 3){
+    structure(0,y,0,"dark_oak3", "NONE","CW_90", "CCW_90", "CW_180");
+}
+if(rgn == 4){
+    structure(0,y,0,"dark_oak4", "NONE","CW_90", "CCW_90", "CW_180");
+}
+if(rgn == 5){
+    structure(0,y,0,"dark_oak5", "NONE","CW_90", "CCW_90", "CW_180");
+}

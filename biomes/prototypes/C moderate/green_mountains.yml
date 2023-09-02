@@ -1,0 +1,20 @@
+id: GREEN_MOUNTAINS
+type: BIOME
+abstract: true
+vanilla: minecraft:windswept_gravelly_hills
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - LILY_OF_THE_VALLEY_PATCH
+    - DANDELION_PATCH
+    - GRASS

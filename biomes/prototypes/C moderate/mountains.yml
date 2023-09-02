@@ -1,0 +1,19 @@
+id: MOUNTAINS
+type: BIOME
+abstract: true
+vanilla: minecraft:stony_peaks
+
+palette:
+  - STONE: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BOULDER_STONE
+    - ROCK_STONE

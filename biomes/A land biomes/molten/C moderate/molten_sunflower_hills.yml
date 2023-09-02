@@ -1,0 +1,17 @@
+id: MOLTEN_SUNFLOWER_HILLS
+type: BIOME
+extends: [ PLAINS, MOLTEN, CARVING ]
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+  - PLAINS: 180
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - SUNFLOWER_COVER
+    - OAK_BUSH
+    

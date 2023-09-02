@@ -1,0 +1,37 @@
+id: MOLTEN
+type: BIOME
+abstract: true 
+
+vars: &variables
+
+  blobBase: 100 #blobs middle on Y
+
+  upperBlob: 50 #blob strength
+  upperShift: 100 #its hard to describe
+  upperCarvedTerrain: 50 #adding carved terrain, 36 is for no carved terrain
+  upperBlobRange: 10  #additional range for blobks to spawn from blobBase value
+  upperCoRange: 0 #doing same thing as upperBlobRange, maybe something else idk...
+
+# here are same things just for lower blobs (downwards from blobBase)
+  lowerBlob: 40
+  loverShift: -50
+  loverCarvedTerrain: 50
+  loverBlobRange: 10
+  loverCoRange: 0
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression: |
+      if((y > blobBase),
+        -y + upperCarvedTerrain + (noise3(x, y, z)*upperBlobRange)+upperShift + (noise3(x, y, z)+upperCoRange)*2 * 40,
+        y - loverCarvedTerrain - (noise3(x, y, z)*loverBlobRange)-loverShift + (noise3(x, y, z)+loverCoRange)*2 * 40
+      )
+
+    variables: *variables
+    samplers:
+      noise3:
+        dimensions: 3
+        type: OPEN_SIMPLEX_2
+        frequency: 0.016

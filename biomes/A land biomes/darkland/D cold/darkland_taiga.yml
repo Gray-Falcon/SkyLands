@@ -1,0 +1,3 @@
+id: DARKLAND_TAIGA
+type: BIOME
+extends: [ TAIGA, DARKLAND, CARVING ]

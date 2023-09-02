@@ -1,0 +1,22 @@
+id: IMMERSION_INFECTED
+type: BIOME
+extends: [ IMMERSION_DENSE ]
+vanilla: minecraft:deep_dark
+
+palette:
+  - IMMERSION_FOSSIL: 319
+
+features:
+  first:
+
+  second:
+    - SCULK_PATCHES
+    - SCULK_TENDRIL
+
+  third:
+    - SCULK_HANGING_VINES
+    - SCULK_FLORA
+  fourth:
+
+tags:
+  - IMMERSION_CAVES

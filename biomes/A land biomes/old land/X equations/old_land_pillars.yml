@@ -1,0 +1,66 @@
+id: OLD_LAND_PILLARS_SMALL
+type: BIOME
+abstract: true 
+
+vars: &variables
+  base: 64
+  height: 80
+  pillarHeight: 20
+  pillarHeightVariation: 10
+  pillarWidth: 1.1  // inversed
+  pillarWidthVariation: 6
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    variables: *variables
+    expression: |
+      max(
+        if(-y + (base + (Simplex2Doct(x*0.7, z*0.7)+1)/2.1 * height) + basepillars(x, z) * 10 < -5,
+          (basepillars(x,z) 
+            + min(0.82 * pillarWidth, 0.58 * pillarWidth + (pillarBaseWidth(x, z) / pillarWidthVariation))
+            - (pillarWidthRand(y, (x + z) / 50) / 9)
+            + (max((y-(base + (Simplex2Doct(x*0.7, z*0.7)+1)/2.1 * height)) - (pillarHeight + basepillarsCenter(x,z) * pillarHeightVariation) + 7, 0) / 4 ))
+          * -max((pillarHeight + basepillarsCenter(x,z) * pillarHeightVariation) - (y - (base + (Simplex2Doct(x*0.7, z*0.7)+1)/2.1 * height)), 0), 
+        -y + (base + (Simplex2Doct(x*0.7, z*0.7)+1)/2.1 * height)),
+        if(y<180,Simplex3D(x, y/2, z)-(0.8+|(180-y)/50|),
+          if(y>185, Simplex3D(x, y/2, z)-(0.8+|(185-y)/50|) ,Simplex3D(x, y/2, z)-0.8)
+        )
+      )
+
+    samplers:
+      pillarWidthRand:
+        dimensions: 2
+        type: FBM
+        sampler:
+          dimensions: 2
+          type: OPEN_SIMPLEX_2S
+          frequency: 0.3
+        octaves: 2
+        lacunarity: 2
+        gain: 0.3
+      pillarBaseWidth:
+        dimensions: 2
+        type: OPEN_SIMPLEX_2
+        frequency: 0.018
+      pillarBaseHeight:
+        dimensions: 2
+        type: OPEN_SIMPLEX_2
+        frequency: 0.01
+      basepillars:
+        dimensions: 2
+        type: LINEAR
+        min: -1
+        max: 0.2
+        sampler:
+          type: CELLULAR
+          frequency: 0.022
+          jitter: 0.85
+          distance: Euclidean
+      basepillarsCenter:
+        dimensions: 2
+        type: CELLULAR
+        frequency: 0.022
+        jitter: 0.85
+        return: CellValue

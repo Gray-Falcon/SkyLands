@@ -1,0 +1,15 @@
+id: OLD_LAND_GRAVELLY_MOUNTAINS
+type: BIOME
+extends: [ GRAVELLY_MOUNTAINS, OLD_LAND_MOUNTAINS, OLD_LAND_CARVING_MOUNTAINS ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

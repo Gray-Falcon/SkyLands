@@ -1,0 +1,35 @@
+id: OLD_LAND_MUD_BLOCKS
+
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator: 
+  type: PATTERN
+  range:
+    min: 50
+    max: 80
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:mud
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 5
+    warp:
+      type: OPEN_SIMPLEX_2
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: highSimplex2D(x*5, z*5)
+  structures:
+    - BLOCK:minecraft:mud: 3
+    - blank: 2

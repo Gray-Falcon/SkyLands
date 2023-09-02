@@ -1,0 +1,20 @@
+id: AEROPELAGO_SILENCE
+type: BIOME
+extends: [ AEROPELAGO ]
+vanilla: minecraft:plains
+
+palette:
+  - PLAINS: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    - GRASS
+    
+  temporary: 
+    - CONTAIN_FLOATING_WATER_FROSTED_ICE
+    - TORCH
+
+tags:
+  - USE_AEROPELAGO_RIVER
+  - USE_AEROPELAGO_RIVER2

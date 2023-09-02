@@ -1,0 +1,16 @@
+id: MOLTEN_PLAINS
+type: BIOME
+extends: [ PLAINS, MOLTEN_FLAT, CARVING ]
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+  - PLAINS: 180
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - OAK_BUSH
+    

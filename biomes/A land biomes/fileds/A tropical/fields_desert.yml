@@ -1,0 +1,12 @@
+id: FIELDS_DESERT
+type: BIOME
+extends: [ DESERT, FIELDS_FLAT ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+
+tags:
+  - UNDEREGROUND_FROZEN

@@ -1,0 +1,24 @@
+id: OLD_LAND_SINKHOLE
+type: BIOME
+extends: [ OCEAN, OLD_LAND_CARVING_MOUNTAINS ]
+vanilla: minecraft:the_void
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      1
+
+palette:
+  - BLOCK:minecraft:stone: 319
+
+
+features:
+  first:
+    - REMOVE_TERRAIN
+    - REMOVE_FLOATING_WATER
+    - CAVE_MAGMA_LAKE_50
+  second:
+    - CONTAIN_FLOATING_WATER2
+
+

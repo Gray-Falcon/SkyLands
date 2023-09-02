@@ -1,0 +1,17 @@
+id: DARKLAND_RIME_SPIKES
+type: BIOME
+extends: [ DARKLAND, CARVING ]
+vanilla: minecraft:ice_spikes
+
+palette:
+  - DARKLAND_ICE: 319
+
+features:
+  first:
+    - RIME_SPIKE
+    - DEEP_POWDER_SNOW
+    - LONG_ICICLE
+    - ICE_STAR
+    - ICICLE
+    - SNOW_BLOCK_COVER
+    - SNOW

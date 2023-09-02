@@ -1,0 +1,19 @@
+num y = 0;
+for(num x = -2; x<2; x=x+1){
+    for(num z = -2; z<2; z=z+1){
+        if(getBlock(x,-1,z) == "minecraft:air"){
+            if(getBlock(x,-2,z) == "minecraft:air"){
+                fail;
+            }
+            y = -1;
+        }   
+    }
+}
+
+num rgn = randomInt(2);
+if(rgn == 1){
+    structure(0,y,0,"large_spruce1", "NONE","CW_90", "CCW_90", "CW_180");
+}
+if(rgn == 2){
+    structure(0,y,0,"large_spruce2", "NONE","CW_90", "CCW_90", "CW_180");
+}

@@ -1,0 +1,51 @@
+id: DARK_OAK_FOREST
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.052
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 255
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:grass_block
+          - minecraft:coarse_dirt
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 20
+    warp:
+      type: WHITE_NOISE
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: highSimplex2D(x*2, z*2)
+  structures:
+    - vanilla_oak: 10
+    - dead_oak: 1
+    - large_oak: 1
+    - large_oak2: 1
+    - oak_tree: 10
+    - blank: 5
+  

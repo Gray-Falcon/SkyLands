@@ -1,0 +1,26 @@
+stages:
+  - type: REPLACE
+    from: USE_SINKHOLE
+    to:
+      - SELF: 1
+      - OLD_LAND_SINKHOLE: 1
+
+
+    sampler: &sampler
+      type: EXPRESSION
+      expression: |
+        (noise(x,z)-0.1)*10
+      samplers:
+        noise:
+          type: DOMAIN_WARP
+          amplitude: 25
+          dimensions: 2
+          warp:
+            type: CELLULAR
+            salt: 8808080808
+            return: Distance2Div
+            frequency: 0.001
+          sampler:
+            type: EXPRESSION
+            expression: (Simplex2D(x/4, z/4)-0.5)
+

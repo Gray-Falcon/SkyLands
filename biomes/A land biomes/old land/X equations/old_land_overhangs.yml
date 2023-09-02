@@ -1,0 +1,37 @@
+id: OLD_LAND_OVERHANGS
+type: BIOME
+abstract: true
+
+# Shattered hills
+
+vars: &variables
+  base: 80
+  height: 110
+  shatterHeight: 78
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    variables: *variables
+    expression: 
+      max(
+        -y + base + (Simplex2D(x, z)+1)/2 * height + |shatter(x/3, y, z/3)*shatterHeight|,
+        if(y<180,Simplex3D(x, y/2, z)-(0.8+|(180-y)/50|),
+          if(y>185, Simplex3D(x, y/2, z)-(0.8+|(185-y)/50|) ,Simplex3D(x, y/2, z)-0.8)
+        )
+      )
+
+    samplers:
+      shatter:
+        type: CLAMP
+        min: -1
+        max: 1
+        dimensions: 3
+        sampler:
+          type: FBM
+          dimensions: 3
+          octaves: 4
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.025

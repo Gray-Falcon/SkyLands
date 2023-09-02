@@ -1,0 +1,29 @@
+id: BAMBOO_JUNGLE
+type: BIOME
+abstract: true
+vanilla: minecraft:bamboo_jungle
+
+palette:
+  - BAMBOO_JUNGLE: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - EMERALD_ORE
+    
+  prototype1:
+    - SANDY_WATER_POOLS
+    - BAMBOO_FOREST
+    - MELON
+    - PUMPKIN
+    - GRASS
+    - VINES
+    - SEAGRASS
+    - SUGAR_CANE
+

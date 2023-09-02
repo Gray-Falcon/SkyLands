@@ -1,0 +1,22 @@
+id: RIME_SPIKES
+type: BIOME
+abstract: true
+vanilla: minecraft:ice_spikes
+
+palette:
+  - TAIGA: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - LAPIS_ORE_EXTRA
+  prototype1:
+    - RIME_SPIKE
+    - SNOW_BLOCK_COVER
+    - SNOW

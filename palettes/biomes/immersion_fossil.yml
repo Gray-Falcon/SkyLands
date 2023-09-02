@@ -1,0 +1,49 @@
+id: IMMERSION_FOSSIL
+type: PALETTE
+
+layers:
+
+  - materials:
+      - minecraft:deepslate: 30
+      - minecraft:bone_block: 20
+      - minecraft:deepslate_diamond_ore: 1
+      - minecraft:bone_block: 10
+    layers: 1
+sampler:
+  type: EXPRESSION
+  expression: |
+    max(
+      max(
+        max(
+          (ridged(x, z)-0.65)*thickness - |y-(330*Simplex2D(x/slope,z/slope))|,
+          (ridged(x-1111, z)-0.65)*thickness - |y-(330*Simplex2D((x-1111)/slope,z/slope))|
+        ),
+        max(
+          (ridged(x-2222, z)-0.65)*thickness - |y-(330*Simplex2D((x-2222)/slope,z/slope))|,
+          (ridged(x-3333, z)-0.65)*thickness - |y-(330*Simplex2D((x-3333)/slope,z/slope))|
+        )
+      ),
+      max(
+        max(
+          (ridged(x-4444, z)-0.65)*thickness - |y-(330*Simplex2D((x-4444)/slope,z/slope))|,
+          (ridged(x-5555, z)-0.65)*thickness - |y-(330*Simplex2D((x-5555)/slope,z/slope))|
+        ),
+        max(
+          (ridged(x-6666, z)-0.65)*thickness - |y-(330*Simplex2D((x-6666)/slope,z/slope))|,
+          (ridged(x-7777, z)-0.65)*thickness - |y-(330*Simplex2D((x-7777)/slope,z/slope))|
+        )
+      )
+    )-8.5
+  variables:
+    thickness: 30
+    slope: 7 # less is more
+  samplers:
+    ridged:
+      dimensions: 2
+      type: PROBABILITY
+      sampler:
+        type: RIDGED
+        octaves: 1
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.008

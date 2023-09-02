@@ -1,0 +1,29 @@
+id: MOSSY_MOUNTAINS
+type: BIOME
+abstract: true
+vanilla: minecraft:windswept_hills
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BOULDER_MOSSY
+    - ROCK_MOSSY
+    - ROCK_STONE
+    - CEILING_VINES
+    - OAK_BUSH
+    - OAK_SINGLE
+    - VINES
+    - LILY_OF_THE_VALLEY_PATCH
+    - DANDELION_PATCH
+    - GRASS
+    - MOSS_CARPET

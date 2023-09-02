@@ -1,0 +1,18 @@
+id: FROZEN_DEPTHS
+type: BIOME
+extends: [ DEPTHS ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - FROZEN_DEPTHS: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - THICC_ICICLE
+    - ICE_STAR
+  third:
+
+
+  fourth:

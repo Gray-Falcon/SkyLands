@@ -1,0 +1,24 @@
+id: MOLTEN_JUNGLE
+type: BIOME
+extends: [ JUNGLE, MOLTEN, CARVING ]
+
+ocean:
+  palette: WATER20
+  level: 115
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+  - PLAINS: 170
+  - CLAY_GRASS: 115
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - WEB_VINES_OAK
+    - OAK_HANGING_VINES
+    - SEAGRASS
+    - SEA_PICKLES
+    - CROSSING_VINES_OAK

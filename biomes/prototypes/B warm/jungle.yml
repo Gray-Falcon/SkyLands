@@ -1,0 +1,28 @@
+id: JUNGLE
+type: BIOME
+abstract: true
+vanilla: minecraft:jungle
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - EMERALD_ORE
+  prototype1:
+    - JUNGLE_FOREST
+    - MELON
+    - PUMPKIN
+    - PEONY_PATCH
+    - GRASS
+    - VINES
+    - SEAGRASS
+    - SUGAR_CANE
+

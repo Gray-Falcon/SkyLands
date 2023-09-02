@@ -1,0 +1,34 @@
+num randPrecision = 100;
+num radius = randomInt(randPrecision)/randPrecision*3 + 1;
+num radiusCeil = ceil(radius);
+num radiusSquared = pow(radius, 2);
+
+for(num x = -radiusCeil; x <= radiusCeil; x = x + 1) {
+    for(num y = 4; y > -4; y = y - 1) {
+        for(num z = -radiusCeil; z <= radiusCeil; z = z + 1) {
+            num distanceSquared = (pow(x,2) + pow(y*3,2) + pow(z,2));
+            if (distanceSquared/radiusSquared < randomInt(randPrecision)/100) {
+                if (getBlock(x,y-1,z) == "minecraft:coarse_dirt" || getBlock(x,y-1,z) == "minecraft:grass_block" || getBlock(x,y-1,z) == "minecraft:podzol") {
+                    if (getBlock(x,y,z) == "minecraft:air" || getBlock(x,y,z) == "minecraft:snow") {
+                        if (0.7 > randomInt(randPrecision)/100) {
+                            
+                            num blockSelection = randomInt(10)/10;
+                            if (blockSelection <= 0.4) block(x, y, z,"minecraft:stone_slab");
+                            else if (blockSelection <= 0.7) block(x, y, z,"minecraft:mossy_cobblestone_slab");
+                            else block(x, y, z,"minecraft:cobblestone_slab");
+
+                        } else {
+
+                            num blockSelection = randomInt(10)/10;
+                            if (blockSelection <= 0.3) block(x, y, z,"minecraft:stone");
+                            else if (blockSelection <= 0.7) block(x, y, z,"minecraft:mossy_cobblestone");
+                            else block(x, y, z, "minecraft:cobblestone");
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+id: RIVER
+type: BIOME
+abstract: true
+vanilla: minecraft:river
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - RIVER: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - SEAGRASS

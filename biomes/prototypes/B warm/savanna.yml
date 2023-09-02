@@ -1,0 +1,23 @@
+id: SAVANNA
+type: BIOME
+abstract: true
+vanilla: minecraft:savanna
+
+palette:
+  - PLAINS: 319
+
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - ACACIA_SINGLE
+    - ACACIA_BUSH
+    - POPPY_PATCH
+    - LILY_OF_THE_VALLEY_PATCH
+    - GRASS

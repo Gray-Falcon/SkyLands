@@ -1,0 +1,25 @@
+id: FIELDS_COBBLESTONE_MOUNTAINS
+type: BIOME
+extends: [ FIELDS_HILLS ]
+vanilla: minecraft:forest
+
+palette:
+  - COBBLE_CLIFFS: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - ROCK_MOSSY
+    - ROCK_STONE
+  third:
+    - OAK_BUSH
+
+  fourth:
+    - DEAD_BUSH
+    - GRASS
+
+tags:
+  - UNDEREGROUND_FROZEN
+

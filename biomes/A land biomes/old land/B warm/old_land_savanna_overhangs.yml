@@ -1,0 +1,24 @@
+id: OLD_LAND_SAVANNA_OVERHANGS
+type: BIOME
+extends: [ SAVANNA, OLD_LAND_OVERHANGS, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - SAVANNA: 319
+  - SAND: 65
+
+slant:
+  - threshold: 6
+    palette:
+      - TERRACOTTA_SLANT: 319
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

@@ -1,0 +1,33 @@
+id: DEEP_POWDER_SNOW
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: PROBABILITY
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.01
+      salt: 4293
+  threshold: 0.1
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: -50
+        max: 319
+      amount: 1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+        type: MATCH_SOLID
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: deep_powder_snow

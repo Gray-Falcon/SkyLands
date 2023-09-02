@@ -1,0 +1,57 @@
+id: OLD_LAND_HILLS
+type: BIOME
+abstract: true 
+
+vars: &variables
+  maxBase: 72
+  height: 28
+  lower: 25
+  maximum: 140
+  mid: 95
+  minimum: 68
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      max(
+        max(
+          -y + maxBase - (Simplex2D(x,z)*8),
+          (Simplex2D(x, z)*(height+8)-|maxBase-y|)
+          -(|erosion(x/7,y/4,z/7)|
+          * 100
+          * max(0, min((y-minimum)/(mid-minimum),(y-maximum)/(mid-maximum))))
+          -(Simplex2D(z,x)/2)
+        ),
+        max(
+          if( y<maxBase,
+            1,
+            max(
+              Simplex2D(x-1000,z)*height - | y-maxBase+(Simplex2D(x,z)*8) |,
+              Simplex2D(x*2,z*2-1000)*(height-8) - | y-maxBase |
+            )
+          ),
+          ((simplex3(x*3, y*1, z*3)*8) - 1 - ( |y-(150+(20*Simplex2D(x*0.1, z*0.1)))| * if((y > (170+(20*Simplex2D(x, z)))), 2, 0.2) )-((Simplex2D(x/2,z/2)+0.8)*8))
+        )
+      )
+    variables: *variables
+    samplers:
+      erosion:
+        dimensions: 3
+        type: OPEN_SIMPLEX_2
+        frequency: 0.03
+      simplex:
+        dimensions: 2
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.0075
+      simplex3:
+        dimensions: 3
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.0075

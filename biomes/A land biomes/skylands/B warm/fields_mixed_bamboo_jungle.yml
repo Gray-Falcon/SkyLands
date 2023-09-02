@@ -1,0 +1,29 @@
+id: SKYLANDS_MIXED_BAMBOO_JUNGLE
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:jungle
+
+palette:
+  - BAMBOO_JUNGLE: 319
+  - OCEAN_FLOOR_DIRT: 63
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+  third:
+    - JUNGLE_FOREST
+    - BAMBOO_FOREST
+  fourth:
+    - LILY_OF_THE_VALLEY_PATCH
+    - MELON
+    - PUMPKIN
+    - GRASS
+    - VINES
+
+tags:
+  - UNDEREGROUND_FROZEN

@@ -1,0 +1,24 @@
+id: OLD_LAND_FLAT
+type: BIOME
+abstract: true 
+
+vars: &variables
+  base: 64
+  height: 16
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    dimensions: 3
+    variables: *variables
+    expression: -y + base
+
+  sampler-2d:
+    dimensions: 2
+    type: EXPRESSION
+    variables: *variables
+    expression: 
+      max(
+        (Simplex2D(x, z)+0.2)/2 * height,
+        (Simplex2D(z*2, x*2)-0.2) * height
+      )

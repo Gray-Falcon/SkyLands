@@ -1,0 +1,17 @@
+id: OLD_LAND_MANGROVE_SWAMP
+type: BIOME
+extends: [ MANGROVE_SWAMP, OLD_LAND_CRACKED, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+    - OLD_LAND_MUD_BLOCKS
+
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

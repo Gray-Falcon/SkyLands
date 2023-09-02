@@ -1,0 +1,31 @@
+id: TENTACLE_FOSSIL
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 75784
+  threshold: 0.8
+
+locator:
+  type: PATTERN
+  range:
+    min: -64
+    max: 319
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_SET
+        blocks:
+          - minecraft:deepslate
+        offset: 0
+      - type: MATCH_AIR
+        offset: 8
+      - type: MATCH_AIR
+        offset: -16
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: schem_tentacle_fossil

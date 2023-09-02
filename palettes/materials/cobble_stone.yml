@@ -1,0 +1,12 @@
+id: COBBLE_STONE
+type: PALETTE
+
+layers:
+  - materials: 
+      - minecraft:cobblestone: 1
+      - minecraft:stone: 6
+    layers: 1
+sampler:
+  type: OPEN_SIMPLEX_2
+  frequency: 0.02
+  salt: 42

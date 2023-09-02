@@ -1,0 +1,10 @@
+num depth = 7 + randomInt(7);
+
+num i = 0;
+for (i; i < depth; i = i + 1) {
+    if(getBlock(0, -i, 0) != "minecraft:air") {
+        return;
+    }
+
+    block(0, -i, 0, "minecraft:ice", false);
+}

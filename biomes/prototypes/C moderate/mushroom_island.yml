@@ -1,0 +1,21 @@
+id: MUSHROOM_ISLAND
+type: BIOME
+abstract: true
+vanilla: minecraft:mushroom_fields
+
+palette:
+  - MYCELIUM: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - LARGE_MUSHROOMS
+    - VANILLA_MUSHROOMS
+    - MUSHROOM_DISK_PATCHES
+    - MUSHROOMS

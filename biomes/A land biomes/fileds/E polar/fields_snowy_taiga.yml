@@ -1,0 +1,23 @@
+id: FIELDS_SNOWY_TAIGA
+type: BIOME
+extends: [ FIELDS_HILLS ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - TAIGA: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - ROCK_MOSSY
+  third:
+    - SPRUCE_FOREST
+
+  fourth:
+    - BERRY_BUSH
+    - SNOW
+
+tags:
+  - UNDEREGROUND_FROZEN

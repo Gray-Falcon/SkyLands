@@ -1,0 +1,26 @@
+precipitation-map: &precipitation-map
+  dimensions: 2
+  type: EXPRESSION
+  expression:
+    highSimplex2D(floor(z / gridSize) * gridSize,floor(x / gridSize) * gridSize)
+
+  variables:
+    gridSize: 250
+
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *precipitation-map
+    default-from: donut
+    default-to:
+        - ERODED_DONUT_VOLCANIC: 1
+        - ERODED_DONUT_WATERFALLS: 1
+        - DONUT_PLAINS: 1
+        - DONUT_OAK_FOREST: 1
+        - DONUT_BIRCH_FOREST: 1
+        - DONUT_MOSSY_CLIFFS: 1
+        - DONUT_MUSHROOM: 1
+    to:
+
+      something:
+        - OLD_LAND_DESERT: 1

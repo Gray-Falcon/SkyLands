@@ -1,0 +1,21 @@
+id: IMMERSION_SWAMP
+type: BIOME
+extends: [ IMMERSION ]
+vanilla: minecraft:swamp
+
+palette:
+  - IMMERSION_GRASS: 319
+  - DEEPSLATE: 64
+
+features:
+  first:
+    - CEILING_VINES
+    - WEB_VINES_OAK
+  second:
+    - OAK_HANGING_VINES
+  third:
+    - OAK_SINGLE
+    - OAK_BUSH
+  fourth:
+    - VINES
+    - GRASS

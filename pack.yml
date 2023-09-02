@@ -1,0 +1,78 @@
+id: SKYLANDS
+version: 0.2.0
+author: Falcon
+
+generator: NOISE_3D
+
+addons:
+  biome-provider-pipeline-v2: "1.+"
+  biome-provider-single: "1.+"
+  biome-provider-extrusion: "1.+"
+  chunk-generator-noise-3d: "1.+"
+  config-biome: "1.+"
+  config-flora: "1.+"
+  config-noise-function: "1.+"
+  config-ore: "1.+"
+  config-palette: "1.+"
+  config-distributors: "1.+"
+  config-locators: "1.+"
+  config-feature: "1.+"
+  structure-terrascript-loader: "1.+"
+  structure-sponge-loader: "1.+"
+  language-yaml: "1.+"
+  generation-stage-feature: "1.+"
+  structure-function-check-noise-3d: "1.+"
+  palette-block-shortcut: "1.+"
+  structure-block-shortcut: "1.+"
+  terrascript-function-sampler: "1.+"
+  
+biomes: $pipeline/pipeline.yml:biomes
+
+stages:
+  - id: ores
+    type: FEATURE
+  - id: extra_ores
+    type: FEATURE
+
+  - id: first
+    type: FEATURE
+  - id: second
+    type: FEATURE
+  - id: third
+    type: FEATURE
+  - id: fourth
+    type: FEATURE
+
+  - id: prototype1
+    type: FEATURE
+  - id: prototype2
+    type: FEATURE
+  - id: prototype3
+    type: FEATURE
+    
+  - id: temporary
+    type: FEATURE
+
+
+    
+functions:
+  "<<":
+    - math/functions/terrace.yml:functions
+    - math/functions/lerp.yml:functions
+    - math/functions/maskSmooth.yml:functions
+    - math/functions/kleinTorus.yml:functions
+
+samplers:
+  "<<":
+    - math/samplers/simplex.yml:samplers
+    - math/samplers/white.yml:samplers
+    - math/samplers/warp.yml:samplers
+
+blend:
+  palette:
+    resolution: 2
+    amplitude: 2
+    sampler:
+      type: WHITE_NOISE
+
+# /locate biome terra:skylands/skylands/

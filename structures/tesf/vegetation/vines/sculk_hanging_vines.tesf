@@ -1,0 +1,7 @@
+num length = randomInt(4) + 3;
+for (num i = 0; i < 2+length; i = i + 1) {
+    if (getBlock(0, -i, 0) != "minecraft:air") fail;
+}
+for (num i = 0; i < length; i = i + 1) {
+    block(0,-i,0,"minecraft:sculk");
+}

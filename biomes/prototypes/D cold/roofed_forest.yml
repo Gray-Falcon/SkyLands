@@ -1,0 +1,23 @@
+id: ROOFED_FOREST
+type: BIOME
+abstract: true
+vanilla: minecraft:dark_forest
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - CONTAIN_FLOATING_WATER
+    - ROCK_MOSSY
+    - ROOFED_FOREST
+    - MUSHROOMS
+    - POPPY_PATCH
+    - GRASS

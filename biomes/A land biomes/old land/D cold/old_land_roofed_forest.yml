@@ -1,0 +1,23 @@
+id: OLD_LAND_ROOFED_FOREST
+type: BIOME
+extends: [ ROOFED_FOREST, OLD_LAND_HILLS, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - ROCK_MOSSY
+    - ROOFED_FOREST
+    - MUSHROOMS
+    - POPPY_PATCH
+    - GRASS
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

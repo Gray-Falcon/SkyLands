@@ -1,0 +1,26 @@
+id: SWAMP
+type: BIOME
+abstract: true
+vanilla: minecraft:swamp
+
+palette:
+  - SWAMP: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BOULDER_MOSSY
+    - ROCK_MOSSY
+    - SWAMP_FOREST
+    - SUGAR_CANE
+    - BLUE_ORCHID_PATCH
+    - GRASS
+    - VINES
+    - LILY_PADS

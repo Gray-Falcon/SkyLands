@@ -1,0 +1,11 @@
+num counter=0;
+for (num i = 0; i <= 8; i = i + 1) {
+    if (getBlock(0,-i,0) != "minecraft:air" )counter=counter+1;
+}
+
+if(counter>0){
+    for (num i = 0; i <= 8; i = i + 1) {
+        block(0,-i,0, "minecraft:water", false);
+        if (getBlock(0,-i,0) == "minecraft:grass_block" ) block(0,-i,0, "minecraft:dirt");
+    }
+}

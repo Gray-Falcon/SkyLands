@@ -1,0 +1,25 @@
+id: MAGMA_CAVE
+type: BIOME
+abstract: true
+vanilla: minecraft:dripstone_caves
+
+palette:
+  - STONE: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  first:
+    - CAVE_MAGMA_LAKE_50
+    - CAVE_MAGMA_LAKE_20
+  second:
+    - CONTAIN_FLOATING_WATER
+    - CONTAIN_FLOATING_LAVA
+  third:
+    - LAVA_COLUMN
+    - GLOW_LICHEN

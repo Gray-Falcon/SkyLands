@@ -1,0 +1,14 @@
+if(randomInt(10)==1){
+    for (num i = 0; i <= 250; i = i + 1) {
+        if(getBlock(0, i, 0) != "minecraft:air"){
+            
+            if(randomInt(30)==1){
+                block(0, 0, 0, "minecraft:ochre_froglight");
+                return;
+            }
+            
+        }
+    }
+}
+block(0, -1, 0, "minecraft:farmland");
+block(0, 0, 0, "minecraft:wheat[age=7]");

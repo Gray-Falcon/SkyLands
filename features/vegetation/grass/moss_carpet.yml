@@ -1,0 +1,41 @@
+id: MOSS_CARPET
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.05
+
+locator:
+  type: AND
+  locators:
+    - type: SURFACE
+      range: &range
+        min: -64
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:moss_block
+          - minecraft:clay
+          - minecraft:stone
+          - minecraft:cobblestone
+          - minecraft:mossy_cobblestone
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 10
+    warp:
+      type: WHITE_NOISE
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: highSimplex2D(x, z)
+  structures:
+    - BLOCK:minecraft:moss_carpet: 1
+    - blank: 2

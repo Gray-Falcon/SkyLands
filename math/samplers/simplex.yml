@@ -1,0 +1,79 @@
+samplers:
+
+
+
+
+  highSimplex2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.01
+  Simplex2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.005
+  lowSimplex2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.0005
+
+
+  Simplex2Doct:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    octaves: 4
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.005
+  lowSimplex2Doct:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    octaves: 4
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.0005
+
+
+  highSimplex3D:
+    dimensions: 3
+    type: FBM
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.01
+  Simplex3D:
+    dimensions: 3
+    type: FBM
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.005
+  lowSimplex3D:
+    dimensions: 3
+    type: FBM
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.0005
+
+  Simplex3Doct:
+    dimensions: 3
+    type: FBM
+    octaves: 4
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.005
+  lowSimplex3Doct:
+    dimensions: 3
+    type: FBM
+    octaves: 4
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.0005

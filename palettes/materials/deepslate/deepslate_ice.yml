@@ -1,0 +1,26 @@
+id: DEEPSLATE_ICE
+
+type: PALETTE
+
+layers:
+  - materials: 
+      - minecraft:deepslate: 4
+      - minecraft:ice: 2
+      - minecraft:packed_ice: 1
+      - minecraft:deepslate: 3
+      - minecraft:ice: 2
+      - minecraft:deepslate: 4
+      - minecraft:ice: 1
+    layers: 1
+sampler:
+  type: DOMAIN_WARP
+  amplitude: 1
+  warp:
+    type: GAUSSIAN
+  sampler:
+    type: FBM
+    octaves: 3
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.05
+      salt: 293

@@ -1,0 +1,20 @@
+id: OLD_LAND_ICE_SPIKES
+type: BIOME
+extends: [ ICE_SPIKES, OLD_LAND_HILLS, OLD_LAND_CARVING ]
+
+
+ocean:
+  palette: FROZEN_OCEAN
+  level: 64
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_FROZEN_RIVER

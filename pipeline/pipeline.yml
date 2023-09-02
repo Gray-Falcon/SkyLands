@@ -1,0 +1,39 @@
+biomes:
+  type: EXTRUSION
+  extrusions:
+    - << pipeline/extrusions/global_cave_biomes.yml:extrusions
+    - << pipeline/extrusions/biome_specific_caves.yml:extrusions
+  provider:
+    type: PIPELINE
+    resolution: 10
+    initial-size: 10
+    blend:
+      amplitude: 1.5
+      sampler:
+        type: WHITE_NOISE
+    pipeline:
+      source: $pipeline/worldZones.yml:source
+      stages:
+        - << pipeline/stages/add_border_biomes.yml:stages
+        - << pipeline/stages/climateZones.yml:stages
+
+
+        - << pipeline/stages/individualBiomes.yml:stages
+        - << pipeline/stages/donut_biomes.yml:stages
+
+
+        - << pipeline/stages/expand.yml:stages
+        - << pipeline/stages/expand.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+        - << pipeline/stages/expand.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+        - << pipeline/stages/smooth.yml:stages
+
+
+        - << pipeline/stages/aeropelago_rivers.yml:stages
+        - << pipeline/stages/add_rivers.yml:stages
+
+        #- << pipeline/stages/add_sinkholes.yml:stages

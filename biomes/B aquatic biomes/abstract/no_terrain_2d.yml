@@ -1,0 +1,8 @@
+id: NO_TERRAIN_2D
+type: BIOME
+abstract: true
+
+terrain:
+  sampler-2d:
+    dimensions: 2
+    type: CONSTANT

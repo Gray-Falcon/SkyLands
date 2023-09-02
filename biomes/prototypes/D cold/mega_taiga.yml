@@ -1,0 +1,30 @@
+id: MEGA_TAIGA
+type: BIOME
+abstract: true
+vanilla: minecraft:old_growth_pine_taiga
+
+palette:
+  - TAIGA: 319
+
+slant:
+  - threshold: 3
+    palette:
+      - COARSE_DIRT: 319
+  - threshold: 3.5
+    palette:
+      - BLOCK:minecraft:stone: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BOULDER_MOSSY
+    - ROCK_MOSSY
+    - MEGA_SPRUCE_FOREST
+    - BERRY_BUSH
+    - GRASS

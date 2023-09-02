@@ -1,0 +1,21 @@
+id: CAVE_MAGMA_LAKE_50
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator: 
+  type: PATTERN
+  range:
+    min: -51
+    max: -50
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: lava_lake14

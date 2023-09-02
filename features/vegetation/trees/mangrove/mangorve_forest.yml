@@ -1,0 +1,47 @@
+id: MANGROVE_FOREST
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.04
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 255
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:grass_block
+          - minecraft:mud
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 20
+    warp:
+      type: WHITE_NOISE
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: Simplex2D(x*0.8, z*0.8)
+  structures:
+    - mangrove_tree: 5
+    - blank: 2
+  

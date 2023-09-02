@@ -1,0 +1,8 @@
+id: AEROPELAGO_ERODED_MOUNTAINS
+type: BIOME
+extends: [ MOUNTAINS, AEROPELAGO_ERODED ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    - WEB_VINES_OAK

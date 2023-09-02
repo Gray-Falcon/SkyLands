@@ -1,0 +1,12 @@
+id: COPPER_ORE
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:copper_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_copper_ore
+
+size: 10
+
+exposed: 0.2

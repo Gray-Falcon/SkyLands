@@ -1,0 +1,40 @@
+id: FIELDS_FLAT
+type: BIOME
+abstract: true 
+
+
+vars: &variables
+
+  base: 80
+  range: 16
+
+  yScaleIsland: 3.2
+  yDifference: 1
+  connectivity: 0.5
+
+  upperResolution: 0.7
+  loverResolution: 0.2
+
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      SnowyTundra3D(x*3, y*yDifference, z*3)*yScaleIsland + connectivity - (|y-base+(range*Simplex2D(x*0.1, z*0.1))|/30)
+
+    variables: *variables
+    samplers:
+      SnowyTundra3D:
+        dimensions: 3
+        type: "DOMAIN_WARP"
+        amplitude: 10
+        warp:
+          type: "OPEN_SIMPLEX_2S"
+          frequency: 0.05
+        sampler:
+          type: "FBM"
+          octaves: 4
+          sampler:
+            type: "OPEN_SIMPLEX_2S"
+            frequency: 0.01

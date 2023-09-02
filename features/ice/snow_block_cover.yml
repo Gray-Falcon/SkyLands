@@ -1,0 +1,28 @@
+id: SNOW_BLOCK_COVER
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: WHITE_NOISE
+  threshold: 1
+
+locator:
+  type: AND
+  locators:
+    - type: SURFACE
+      range: &range
+        min: -63
+        max: 319
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:stone
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: snow_block

@@ -1,0 +1,12 @@
+id: GOLD_ORE_SMALL
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:gold_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_gold_ore
+
+size: 5
+
+exposed: 0.2

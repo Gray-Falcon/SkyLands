@@ -1,0 +1,23 @@
+id: GREEN_HILLS
+type: BIOME
+abstract: true
+vanilla: minecraft:plains
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - OAK_SINGLE
+    - BIRCH_SINGLE
+    - SUNFLOWER_PATCH
+    - OXEYE_DAISY_PATCH
+    - DANDELION_PATCH
+    - GRASS

@@ -1,0 +1,47 @@
+stages:
+  - type: REPLACE
+    from: USE_AEROPELAGO_RIVER
+    to:
+      - SELF: 1
+      - AEROPELAGO_RIVER: 1
+
+    sampler: &sampler
+      type: EXPRESSION
+      expression: |
+        ridged(x,z)-0.985
+      samplers:
+        ridged:
+          dimensions: 2
+          type: PROBABILITY
+          sampler:
+            type: RIDGED
+            octaves: 1
+            sampler:
+              type: OPEN_SIMPLEX_2
+              frequency: 0.0005
+
+  - type: REPLACE
+    from: USE_AEROPELAGO_RIVER2
+    to:
+      - SELF: 1
+      - AEROPELAGO_RIVER2: 1
+      
+    sampler: *sampler
+
+
+
+  - type: REPLACE
+    from: USE_AEROPELAGO_FROZEN_RIVER
+    to:
+      - SELF: 1
+      - AEROPELAGO_FROZEN_RIVER: 1
+      
+    sampler: *sampler
+
+  - type: REPLACE
+    from: USE_AEROPELAGO_FROZEN_RIVER2
+    to:
+      - SELF: 1
+      - AEROPELAGO_FROZEN_RIVER2: 1
+      
+    sampler: *sampler

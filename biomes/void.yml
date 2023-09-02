@@ -1,0 +1,23 @@
+id: VOID
+type: BIOME
+extends: [ CARVING ]
+vanilla: minecraft:the_void
+
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression:
+      -0.5- (|y-64|/200)
+
+
+palette:
+  - PLAINS: 319
+
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+
+tags:
+  - BORDER_BIOMES

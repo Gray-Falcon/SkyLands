@@ -1,0 +1,6 @@
+id: DONUT_PLAINS
+type: BIOME
+extends: [ PLAINS, DONUT ]
+
+features:
+  first:

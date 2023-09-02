@@ -1,0 +1,20 @@
+id: MOLTEN_ICE_SPIKES
+type: BIOME
+extends: [ ICE_SPIKES, MOLTEN, CARVING ]
+
+ocean:
+  palette: FROZEN_WATER20
+  level: 115
+
+palette:
+  - DARKLAND_ICE: 319
+  - TUNDRA: 160
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - SEAGRASS
+    - SEA_PICKLES

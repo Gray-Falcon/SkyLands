@@ -1,0 +1,28 @@
+id: PALM_BEACHES_TOP
+
+type: PALETTE
+
+layers:
+  - materials:
+    - minecraft:grass_block: 2
+    - minecraft:coarse_dirt: 2
+    - minecraft:sand: 4
+    - minecraft:stone: 1
+    layers: 1
+  - materials:
+    - minecraft:dirt: 2
+    - minecraft:coarse_dirt: 3
+    - minecraft:sand: 10
+    layers: 2
+  - materials: 
+    - minecraft:sand: 1
+    - minecraft:stone: 1
+    layers: 1
+  - materials: 
+    - minecraft:stone: 1
+    layers: 1
+    
+sampler:
+  type: OPEN_SIMPLEX_2
+  frequency: 0.1
+  salt: 42

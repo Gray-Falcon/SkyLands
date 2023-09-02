@@ -1,0 +1,29 @@
+id: OLD_LAND_SNOWY_TAIGA_LAKES
+type: BIOME
+extends: [ OLD_LAND_LAKES, OLD_LAND_CARVING ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - TAIGA: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+ocean:
+  palette: FROZEN_OCEAN
+  level: 64
+
+features:
+  first:
+
+  second:
+    - CONTAIN_FLOATING_WATER
+    - ROCK_MOSSY
+  third:
+    - SPRUCE_FOREST
+    - SEAGRASS
+  fourth:
+    - BERRY_BUSH
+    - SNOW
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_FROZEN_RIVER

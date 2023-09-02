@@ -1,0 +1,140 @@
+precipitation-map: &precipitation-map
+  dimensions: 2
+  type: CELLULAR
+  return: CellValue
+  frequency: 1 / 400
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *precipitation-map
+    default-from: old_land_tropical
+    default-to:
+        - OLD_LAND_DESERT: 2
+        - OLD_LAND_DESERT_HILLS: 1
+        - OLD_LAND_ERODED_BADLANDS: 2
+        - OLD_LAND_BADLANDS: 1
+        - OLD_LAND_ERODED_BADLANDS_LAKES: 1
+        - OLD_LAND_BADLANDS: 1
+        - OLD_LAND_DESERT: 2
+    to:
+
+      old_land_warm:
+        - OLD_LAND_SAVANNA: 2
+        - OLD_LAND_SAVANNA_FOREST: 2
+        - OLD_LAND_PALM_BEACH: 1
+        - OLD_LAND_MIXED_BAMBOO_JUNGLE: 1
+        - OLD_LAND_JUNGLE: 1
+        - OLD_LAND_BAMBOO_JUNGLE: 2
+        - OLD_LAND_SAVANNA_FOREST: 1
+        - OLD_LAND_SAVANNA_OVERHANGS: 1
+        - OLD_LAND_SAVANNA: 2
+
+      old_land_moderate:
+        - OLD_LAND_PLAINS: 2
+        - OLD_LAND_BIRCH_FOREST: 1
+        - OLD_LAND_FLOWER_FOREST: 1
+        - OLD_LAND_OAK_FOREST: 2
+        - OLD_LAND_PLAINS: 2
+        - OLD_LAND_GREEN_HILLS: 1
+        - OLD_LAND_SWAMP: 2
+        - OLD_LAND_MANGROVE_SWAMP: 1
+        - OLD_LAND_SWAMP: 2
+        - OLD_LAND_GREEN_HILLS: 1
+        - OLD_LAND_GREEN_MOUNTAINS: 1
+        - OLD_LAND_GRAVELLY_MOUNTAINS: 1
+        - OLD_LAND_MOSSY_MOUNTAINS: 1
+        - OLD_LAND_GREEN_HILLS: 3
+        - OLD_LAND_SUNFLOWER_HILLS: 1
+        - OLD_LAND_PLAINS: 2
+        - OLD_LAND_OCEAN: 2
+
+      old_land_cold:
+        - OLD_LAND_TUNDRA: 2
+        - OLD_LAND_ROOFED_FOREST: 3
+        - OLD_LAND_MEGA_TAIGA: 1
+        - OLD_LAND_STONE_OVERHANGS: 1
+        - OLD_LAND_TAIGA_LAKES: 1
+        - OLD_LAND_TAIGA: 2
+
+      old_land_polar:
+        - OLD_LAND_SNOWY_TAIGA: 2
+        - OLD_LAND_SNOWY_MEGA_TAIGA: 1
+        - OLD_LAND_SNOWY_TAIGA_LAKES: 1
+        - OLD_LAND_ICE_SPIKES: 1
+        - OLD_LAND_SNOWY_TUNDRA: 2
+
+# AEROPELAGO
+      aeropelago_moderate:
+        - AEROPELAGO_PLAINS: 3
+        - AEROPELAGO_OAK_FOREST: 3
+        - AEROPELAGO_PLAINS: 1
+        - AEROPELAGO_CLIFFS: 1
+        - AEROPELAGO_MOSSY_CLIFFS: 2
+        - AEROPELAGO_ROOFED_FOREST: 1
+        - AEROPELAGO_MOSSY_CLIFFS: 1
+        - AEROPELAGO_CLIFFS: 2
+        - AEROPELAGO_SILENCE: 1
+        - AEROPELAGO_MOUNTAINS: 3
+        - AEROPELAGO_FROZEN_MOUNTAINS: 3
+      
+      aeropelago_eroded:
+        - AEROPELAGO_ERODED_CLIFFS: 1
+        - AEROPELAGO_ERODED_MOSSY_CLIFFS: 1
+        - AEROPELAGO_ERODED_CLIFFS: 1
+        - AEROPELAGO_ERODED_OAK_FOREST: 1
+        - AEROPELAGO_ERODED_PLAINS: 1
+        - AEROPELAGO_ERODED_WHEATLAND: 1
+
+# IMMERSION
+      immersion:
+        - IMMERSION_SWAMP: 1
+        - IMMERSION_ERODED: 1
+        - IMMERSION_SILENCE: 1
+      immersion_used_to_be:
+        - USED_TO_BE_PLAINS: 1
+        - USED_TO_BE_FOREST: 1
+        - USED_TO_BE_TAIGA: 1
+      immersion_dense:
+        - IMMERSION_INFECTED: 1
+        - IMMERSION_FROZEN: 1
+
+# FIELDS
+      fields_tropical:
+        - FIELDS_DESERT: 1
+      fields_warm:
+        - FIELDS_JUNGLE: 1
+        - FIELDS_MIXED_BAMBOO_JUNGLE: 1
+      fields_moderate:
+        - FIELDS_PLAINS: 1
+        - FIELDS_COBBLE_STONE_MOUNTAINS: 1
+        - FIELDS_FLOWER_FOREST: 1
+      fields_cold:
+        - FIELDS_TAIGA: 1
+      fields_polar:
+        - FIELDS_SNOWY_TUNDRA: 1
+        - FIELDS_ICE_SPIKES: 1
+        - FIELDS_SNOWY_TAIGA: 1
+
+# DARKLAND
+      darkland_cold:
+        - DARKLAND_TAIGA: 1
+        - DARKLAND_MEGA_TAIGA: 1
+        - DARKLAND_ROOFED_FOREST: 1
+      darkland_polar:
+        - DARKLAND_RIME_SPIKES: 5
+        - DARKLAND_TUNDRA: 1
+        - DARKLAND_SNOWY_TAIGA: 1
+
+# MOLTEN
+      molten_tropical:
+        - MOLTEN_JUNGLE: 1
+      molten_warm:
+        - MOLTEN_JUNGLE: 1
+        - MOLTEN_BAMBOO_JUNGLE: 1
+      molten_moderate:
+        - MOLTEN_SUNFLOWER_HILLS: 1
+        - MOLTEN_MIXED_FOREST: 1
+      molten_cold:
+        - MOLTEN_JUNGLE: 1
+      molten_polar:
+        - MOLTEN_ICE_SPIKES: 1

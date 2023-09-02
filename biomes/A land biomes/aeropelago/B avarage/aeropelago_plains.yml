@@ -1,0 +1,15 @@
+id: AEROPELAGO_PLAINS
+type: BIOME
+extends: [ PLAINS, AEROPELAGO ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+
+  temporary: 
+    - CONTAIN_FLOATING_WATER_FROSTED_ICE
+    - TORCH
+
+tags:
+  - USE_AEROPELAGO_RIVER
+  - USE_AEROPELAGO_RIVER2

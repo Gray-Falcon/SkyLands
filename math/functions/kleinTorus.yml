@@ -1,0 +1,25 @@
+functions:
+  kleinTorus:
+    arguments:
+      - x
+      - y
+      - z
+      - r
+      - t
+      - w
+    expression: figureEightWithRotation(sqrt(x^2+z^2)-r,y,atan2(x,z)*t, w)
+    functions:
+      figureEightWithRotation:
+        arguments:
+          - x
+          - y
+          - r
+          - w
+        expression: figureEight(x*cos(r)-y*sin(r), y*cos(r)+x*sin(r), w)
+        functions:
+          figureEight:
+            arguments:
+              - x
+              - y
+              - w
+            expression: (w^2)*(x^2-y^2)-x^4

@@ -1,0 +1,6 @@
+id: DONUT_MOSSY_CLIFFS
+type: BIOME
+extends: [ MOSSY_MOUNTAINS, DONUT ]
+
+features:
+  first:

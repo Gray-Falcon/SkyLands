@@ -1,0 +1,30 @@
+id: PUMPKIN
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 75784
+  threshold: 0.0001
+
+locator:
+  type: PATTERN
+  range:
+    min: 64
+    max: 319
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_SET
+        blocks:
+          - minecraft:grass_block
+          - minecraft:podzol
+        offset: -1
+      - type: MATCH_AIR
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: pumpkin

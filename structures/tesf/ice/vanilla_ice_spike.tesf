@@ -1,0 +1,30 @@
+num length = 30 + randomInt(5);
+num random = randomInt(5);
+for(num i = 0; i <= length; i = i + 1) {
+    block(0, i, 0, "minecraft:packed_ice", false);
+    block(1, i, 0, "minecraft:packed_ice", false);
+    block(0, i, 1, "minecraft:packed_ice", false);
+    block(-1, i, 0, "minecraft:packed_ice", false);
+    block(0, i, -1, "minecraft:packed_ice", false);
+
+    if(random>3){
+        block(1, i, 1, "minecraft:packed_ice", false);
+    }
+    if(random>2 && random<4){
+        block(1, i, -1, "minecraft:packed_ice", false);
+    }
+    if(random>1 && random<3){
+        block(-1, i, 1, "minecraft:packed_ice", false);
+    }
+    if(random<2){
+        block(-1, i, -1, "minecraft:packed_ice", false);
+    }
+
+    random=random-1;
+    if(random < 0){
+        random = randomInt(5);
+    }
+}
+
+
+structure( 0, length+5, 0, "ice_spike_top", "NONE" );

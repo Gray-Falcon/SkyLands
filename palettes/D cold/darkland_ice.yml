@@ -1,0 +1,18 @@
+id: DARKLAND_ICE
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:stone: 40
+      - minecraft:cobblestone: 10
+      - minecraft:packed_ice: 30
+    layers: 1
+    sampler:
+      dimensions: 2
+      type: DOMAIN_WARP
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: CELLULAR
+        frequency: 0.1
+        return: CellValue

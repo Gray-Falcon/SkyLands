@@ -1,0 +1,17 @@
+id: IMMERSION_DEBRIS_FIELD
+type: BIOME
+extends: [ IMMERSION_DEBRIS ]
+vanilla: minecraft:deep_dark
+
+palette:
+  - DEEPSLATE_ERODED: 319
+
+features:
+  first:
+
+  second:
+    - GLOW_LICHEN
+
+  third:
+
+  fourth:

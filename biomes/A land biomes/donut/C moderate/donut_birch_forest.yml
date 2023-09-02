@@ -1,0 +1,6 @@
+id: DONUT_BIRCH_FOREST
+type: BIOME
+extends: [ BIRCH_FOREST, DONUT ]
+
+features:
+  first:

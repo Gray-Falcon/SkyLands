@@ -1,0 +1,13 @@
+id: OLD_LAND_OCEAN
+type: BIOME
+extends: [ OCEAN, OLD_LAND_SHALLOW_OCEAN, OLD_LAND_CARVING ]
+
+features:
+  first:
+    - WATERFILL
+  second:
+
+
+tags:
+  - USE_SINKHOLE
+

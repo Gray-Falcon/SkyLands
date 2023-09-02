@@ -1,0 +1,19 @@
+for (num i = 0; i < 13; i = i + 1) {
+    if(getBlock(0,i,0) != "minecraft:air") fail;
+}
+
+str mushroom = "e";
+if(randomInt(10)>4){
+    mushroom = "red_mushroom_top";
+} else {
+    mushroom = "brown_mushroom_top";
+}
+
+num height = 1+randomInt(8);
+for (num i = 0; i < height; i = i + 1) {
+    block(0,i,0, "minecraft:mushroom_stem");
+
+    if(i==(height-1)){
+        structure(0,i,0, mushroom, "NONE");
+    }
+}

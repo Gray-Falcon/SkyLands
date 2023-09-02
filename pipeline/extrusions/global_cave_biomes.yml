@@ -1,0 +1,31 @@
+extrusions:
+  - type: REPLACE
+    from: OLD_LAND_VANILLA_CAVES
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 1252
+      frequency: 0.001
+    to:
+      - SELF: 7
+      - OLD_LAND_DRIPSTONE_CAVE: 10
+      - OLD_LAND_LUSH_CAVE: 1
+      - OLD_LAND_MAGMA_CAVE: 1
+    range:
+      min: -64
+      max: 10
+
+  - type: REPLACE
+    from: AEROPELAGO_VANILLA_CAVES
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 1252
+      frequency: 0.001
+    to:
+      - AEROPELAGO_DRIPSTONE_CAVE: 1
+      - AEROPELAGO_LUSH_CAVE: 1
+      - AEROPELAGO_MAGMA_CAVE: 1
+    range:
+      min: -64
+      max: 10

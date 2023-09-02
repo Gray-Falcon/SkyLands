@@ -1,0 +1,12 @@
+id: FIELDS_JUNGLE
+type: BIOME
+extends: [ JUNGLE, FIELDS_HILLS ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    
+tags:
+  - UNDEREGROUND_FROZEN

@@ -1,0 +1,41 @@
+id: VANILLA_ICE_SPIKES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 3
+  salt: 12347
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 60
+        max: 255
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SOLID
+        offset: -3
+
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures:
+    - vanilla_ice_spike: 1

@@ -1,0 +1,22 @@
+id: WATERFILL
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -64
+        max: 64
+      pattern:
+        type: MATCH
+        block: "minecraft:air"
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: BLOCK:minecraft:water 

@@ -1,0 +1,30 @@
+id: OLD_LAND_PALM_BEACHES
+type: BIOME
+extends: [ OLD_LAND_ERODED_LOW, OLD_LAND_CARVING ]
+vanilla: minecraft:warm_ocean
+
+palette:
+  - PALM_BEACHES: 319
+  - OCEAN_FLOOR_SAND: 63
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+  second:
+    - PALM_FOREST
+    - CORAL_BLOCKS
+    - LILY_OF_THE_VALLEY_PATCH
+  third:
+    - SUGAR_CANE
+    - MELON
+    - GRASS
+    - CORAL_FANS
+    - SEA_PICKLES
+    - SEAGRASS
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

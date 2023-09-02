@@ -1,0 +1,23 @@
+id: CAVE_LAKE_50
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator: 
+  type: PATTERN
+  range:
+    min: -51
+    max: -50
+  pattern:
+    type: OR
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SOLID
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: lake14

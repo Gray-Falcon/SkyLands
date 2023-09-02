@@ -1,0 +1,57 @@
+id: VINES
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.15
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -64
+        max: 319
+      pattern:
+        type: MATCH_AIR
+        offset: 0
+    - type: OR
+      locators:
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: MATCH_SET
+            blocks:
+              - "minecraft:oak_leaves"
+              - "minecraft:birch_leaves"
+              - "minecraft:spruce_leaves"
+              - "minecraft:jungle_leaves"
+              - "minecraft:acacia_leaves"
+              - "minecraft:dark_oak_leaves"
+              - "minecraft:stone"
+              - "minecraft:grass_block"
+              - "minecraft:dirt"
+            offset: 1
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH_SET
+            blocks:
+              - "minecraft:oak_leaves"
+              - "minecraft:birch_leaves"
+              - "minecraft:spruce_leaves"
+              - "minecraft:jungle_leaves"
+              - "minecraft:acacia_leaves"
+              - "minecraft:dark_oak_leaves"
+              - "minecraft:stone"
+              - "minecraft:grass_block"
+              - "minecraft:dirt"
+            offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: place_vines
+      

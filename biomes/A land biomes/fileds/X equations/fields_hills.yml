@@ -1,0 +1,20 @@
+id: FIELDS_HILLS
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      ((simplex3(x*3, y, z*3)*10) - 1 - ( |y-(80+(15*Simplex2D(x*0.5, z*0.5)))| * if((y > (100+(15*Simplex2D(x, z)))), 2, 0.2) ))
+
+    variables:
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          frequency: 0.0075

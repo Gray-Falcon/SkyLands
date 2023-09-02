@@ -1,0 +1,13 @@
+id: ERODED_DONUT_WATERFALLS
+type: BIOME
+extends: [ PLAINS, DONUT_ERODED ]
+
+palette:
+  - DONUT_WATERFALLS: 319
+
+features:
+  first:
+    - SEAGRASS
+    - SUGAR_CANE
+  temporary:
+    - CONTAIN_FLOATING_WATER_FROSTED_ICE_STONE

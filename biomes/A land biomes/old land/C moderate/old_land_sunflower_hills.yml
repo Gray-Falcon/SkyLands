@@ -1,0 +1,21 @@
+id: OLD_LAND_SUNFLOWER_HILLS
+type: BIOME
+extends: [ GREEN_HILLS, OLD_LAND_HILLS, OLD_LAND_CARVING ]
+vanilla: minecraft:sunflower_plains
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+    - SUNFLOWER_COVER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

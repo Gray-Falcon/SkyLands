@@ -1,0 +1,23 @@
+id: FLOWER_FOREST
+type: BIOME
+abstract: true
+vanilla: minecraft:flower_forest
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - OAK_SINGLE
+    - LARGE_OAK_SINGLE
+    - BIRCH_SINGLE
+    - LARGE_BIRCH_SINGLE
+    - MIXED_FLOWER_COVER
+    - GRASS

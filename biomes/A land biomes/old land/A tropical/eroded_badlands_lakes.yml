@@ -1,0 +1,24 @@
+id: OLD_LAND_ERODED_BADLANDS_LAKES
+type: BIOME
+extends: [ BADLANDS, OLD_LAND_ERODED_LAKES, OLD_LAND_CARVING ]
+
+palette:
+  - RED_SAND: 319
+  - BADLANDS_GRASS: 70
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+  second:
+    - OAK_SINGLE
+    - ACACIA_FOREST
+    - SUGAR_CANE
+    - SEAGRASS
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

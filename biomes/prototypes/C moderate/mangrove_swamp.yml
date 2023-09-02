@@ -1,0 +1,20 @@
+id: MANGROVE_SWAMP
+type: BIOME
+abstract: true
+vanilla: minecraft:mangrove_swamp
+
+palette:
+  - MUD_SWAMP: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - MANGROVE_FOREST
+    - LILY_PADS

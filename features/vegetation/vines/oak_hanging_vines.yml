@@ -1,0 +1,30 @@
+id: OAK_HANGING_VINES
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.15
+
+locator:
+  type: PATTERN
+  range:
+    min: -64
+    max: 319
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:oak_leaves
+        offset: 1
+
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: oak_hanging_vines
+      

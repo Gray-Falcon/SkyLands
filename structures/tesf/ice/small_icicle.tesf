@@ -1,0 +1,16 @@
+num rgn = 1+randomInt(6);
+for(num i = 0; i <= rgn; i = i + 1) {
+    if(check(0,1,0) != "minecraft:air") block(0,-i,0,"minecraft:ice");
+}
+rgn = 1+randomInt(6);
+for(num i = 0; i <= rgn; i = i + 1) {
+    if(check(1,1,0) != "minecraft:air") block(1,-i,0,"minecraft:ice");
+}
+rgn = 1+randomInt(6);
+for(num i = 0; i <= rgn; i = i + 1) {
+    if(check(0,1,1) != "minecraft:air") block(0,-i,1,"minecraft:ice");
+}
+rgn = 1+randomInt(6);
+for(num i = 0; i <= rgn; i = i + 1) {
+    if(check(1,1,1) != "minecraft:air") block(1,-i,1,"minecraft:ice");
+}

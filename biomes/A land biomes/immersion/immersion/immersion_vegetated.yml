@@ -1,0 +1,22 @@
+id: DEEPSLATE_GRASS
+type: BIOME
+extends: [ IMMERSION ]
+vanilla: minecraft:swamp
+
+palette:
+  - DEEPSLATE_GRASS: 319
+  - DEEPSLATE: 64
+
+features:
+  first:
+    - TENTACLE_FOSSIL
+    - CEILING_VINES
+    - WEB_VINES_OAK
+  second:
+    - OAK_HANGING_VINES
+  third:
+    - OAK_SINGLE
+    - OAK_BUSH
+  fourth:
+    - VINES
+    - GRASS

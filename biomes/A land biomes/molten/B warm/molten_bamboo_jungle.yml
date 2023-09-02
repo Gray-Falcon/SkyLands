@@ -1,0 +1,21 @@
+id: MOLTEN_BAMBOO_JUNGLE
+type: BIOME
+extends: [ BAMBOO_JUNGLE, MOLTEN, CARVING ]
+
+ocean:
+  palette: WATER20
+  level: 115
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+  - PLAINS: 170
+  - CLAY_GRASS: 115
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - SEAGRASS
+    - SEA_PICKLES

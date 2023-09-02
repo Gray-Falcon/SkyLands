@@ -1,0 +1,7 @@
+id: DEEPSLATE
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:deepslate: 1
+    layers: 1

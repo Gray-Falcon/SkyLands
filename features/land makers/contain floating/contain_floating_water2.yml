@@ -1,0 +1,38 @@
+id: CONTAIN_FLOATING_WATER2
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -64
+        max: 319
+      pattern:
+        type: MATCH
+        block: minecraft:water
+        offset: 0
+    - type: OR
+      locators:
+        - type: PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:air
+            offset: -1
+        - type: ADJACENT_PATTERN
+          range: *range
+          pattern:
+            type: MATCH
+            block: minecraft:air
+            offset: 0
+
+structures:
+  distribution:
+    type: WHITE_NOISE
+  structures:
+    - stone_segment: 1
+      

@@ -1,0 +1,23 @@
+id: REMOVE_FLOATING_WATER
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -64
+        max: 319
+      pattern:
+        type: MATCH
+        block: "minecraft:water"
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: remove_floating_water
+      

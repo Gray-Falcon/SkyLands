@@ -1,0 +1,8 @@
+id: OLD_LAND_RIVER
+type: BIOME
+extends: [ RIVER, EQ_OLD_LAND_RIVER, OLD_LAND_FLAT, OLD_LAND_CARVING ]
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+

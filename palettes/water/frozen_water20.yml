@@ -1,0 +1,13 @@
+id: FROZEN_WATER20
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:ice: 1
+    layers: 1
+  - materials:
+      - minecraft:water: 1
+    layers: 19
+  - materials:
+      - minecraft:air: 1
+    layers: 1

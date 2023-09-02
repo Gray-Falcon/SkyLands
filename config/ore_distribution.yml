@@ -1,0 +1,279 @@
+
+
+# COAL
+
+# half of vanilla ore generation rate
+COAL_ORE:
+  averageCountPerChunk: 5
+  salt: 1
+  range:
+    min: -63
+    max: 318
+
+# double ore rate for deep areas
+COAL_ORE_DEEP:
+  averageCountPerChunk: 5
+  salt: 7012
+  range:
+    min: -63
+    max: 0
+
+# half of small vanilla ore generation rate
+COAL_ORE_SMALL:
+  averageCountPerChunk: 7
+  salt: 2
+  range:
+    min: -63
+    max: 318
+
+# double small ore rate for dedicated biomes
+COAL_ORE_EXTRA:
+  averageCountPerChunk: 7
+  salt: 7012
+  range:
+    min: -63
+    max: 318
+
+
+
+
+# COPPER
+
+COPPER_ORE:
+  averageCountPerChunk: 5
+  salt: 3
+  range:
+    min: -63
+    max: 318
+
+COPPER_ORE_DEEP:
+  averageCountPerChunk: 5
+  salt: 4
+  range:
+    min: -63
+    max: 0
+
+
+COPPER_ORE_SMALL:
+  averageCountPerChunk: 7
+  salt: 5
+  range:
+    min: -63
+    max: 318
+
+COPPER_ORE_EXTRA:
+  averageCountPerChunk: 7
+  salt: 6
+  range:
+    min: -63
+    max: 318
+
+
+# IRON
+
+IRON_ORE:
+  averageCountPerChunk: 5
+  salt: 7
+  range:
+    min: -63
+    max: 318
+
+IRON_ORE_DEEP:
+  averageCountPerChunk: 5
+  salt: 8
+  range:
+    min: -63
+    max: 0
+
+
+IRON_ORE_SMALL:
+  averageCountPerChunk: 7
+  salt: 9
+  range:
+    min: -63
+    max: 318
+
+IRON_ORE_EXTRA:
+  averageCountPerChunk: 7
+  salt: 10
+  range:
+    min: -63
+    max: 318
+
+
+# LAPIS
+
+LAPIS_ORE:
+  averageCountPerChunk: 1
+  salt: 11
+  range:
+    min: -63
+    max: 318
+
+LAPIS_ORE_DEEP:
+  averageCountPerChunk: 1
+  salt: 12
+  range:
+    min: -63
+    max: 0
+
+
+LAPIS_ORE_SMALL:
+  averageCountPerChunk: 2
+  salt: 13
+  range:
+    min: -63
+    max: 318
+
+LAPIS_ORE_EXTRA:
+  averageCountPerChunk: 2
+  salt: 14
+  range:
+    min: -63
+    max: 318
+
+
+# REDSTONE
+
+REDSTONE_ORE:
+  averageCountPerChunk: 4
+  salt: 15
+  range:
+    min: -63
+    max: 318
+
+REDSTONE_ORE_DEEP:
+  averageCountPerChunk: 4
+  salt: 16
+  range:
+    min: -63
+    max: 0
+
+
+REDSTONE_ORE_SMALL:
+  averageCountPerChunk: 6
+  salt: 17
+  range:
+    min: -63
+    max: 318
+
+REDSTONE_ORE_EXTRA:
+  averageCountPerChunk: 6
+  salt: 18
+  range:
+    min: -63
+    max: 318
+
+
+# GOLD
+
+GOLD_ORE:
+  averageCountPerChunk: 2
+  salt: 19
+  range:
+    min: -63
+    max: 318
+
+GOLD_ORE_DEEP:
+  averageCountPerChunk: 2
+  salt: 20
+  range:
+    min: -63
+    max: 0
+
+
+GOLD_ORE_SMALL:
+  averageCountPerChunk: 3
+  salt: 21
+  range:
+    min: -63
+    max: 318
+
+GOLD_ORE_EXTRA:
+  averageCountPerChunk: 3
+  salt: 22
+  range:
+    min: -63
+    max: 318
+
+
+# DIAMOND
+
+DIAMOND_ORE:
+  averageCountPerChunk: 3
+  salt: 23
+  range:
+    min: -63
+    max: 318
+
+DIAMOND_ORE_DEEP:
+  averageCountPerChunk: 3
+  salt: 24
+  range:
+    min: -63
+    max: 0
+
+
+DIAMOND_ORE_SMALL:
+  averageCountPerChunk: 4
+  salt: 25
+  range:
+    min: -63
+    max: 318
+
+DIAMOND_ORE_EXTRA:
+  averageCountPerChunk: 4
+  salt: 26
+  range:
+    min: -63
+    max: 318
+
+
+# EMERALD
+
+EMERALD_ORE:
+  averageCountPerChunk: 100
+  salt: 27
+  range:
+    min: -63
+    max: 318
+
+EMERALD_ORE_DEEP:
+  averageCountPerChunk: 100
+  salt: 28
+  range:
+    min: -63
+    max: 0
+
+EMERALD_ORE_EXTRA:
+  averageCountPerChunk: 100
+  salt: 29
+  range:
+    min: -63
+    max: 318
+
+
+#---------
+# DEPOSITS
+#---------
+
+DIRT_DEPOSIT:
+  averageCountPerChunk: 2
+  salt: 2139
+  range:
+    min: -63
+    max: 318
+
+CLAY_DEPOSIT:
+  averageCountPerChunk: 2
+  salt: 1785
+  range:
+    min: -63
+    max: 318
+
+GRAVEL_DEPOSIT:
+  averageCountPerChunk: 4
+  salt: 1239
+  range:
+    min: -63
+    max: 318

@@ -1,0 +1,56 @@
+id: AEROPELAGO_ERODED
+type: BIOME
+abstract: true
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression: |
+      max(
+        -1+(Simplex2D(x,z))+
+        lerp(y, max, 0, max-taper,
+          max(
+            lerp(y, min-undercarriageTranslate, 0, min-undercarriageTranslate+taper,
+              simplex3(x, y*flatness, z)
+            ),
+            lerp(y, min, 0, min+taper,
+              simplex3(x, (y-undercarriageTranslate)*flatness, z) * undercarriageMask(x, y/2, z) * 1.3
+            )
+          )
+        ),
+        
+        if(y<160,
+          if(y>-20,
+            Simplex3D(x*3, y*2, z*3)-0.6,
+            Simplex3D(x*3, y*2, z*3)-0.6 - |(-20-y)/40|
+          ),
+          Simplex3D(x*3, y*2, z*3)-0.6 - |(160-y)/40|
+        )-(Simplex3D(x/2,y,x/2)/2)
+      )
+
+    variables:
+      max: 200
+      min: -40
+      taper: 100
+      flatness: 2
+      undercarriageTranslate: 0.4
+    samplers:
+      simplex3:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: FBM
+          octaves: 5
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.02
+      undercarriageMask:
+        dimensions: 3
+        type: PROBABILITY
+        sampler:
+          type: RIDGED
+          octaves: 3
+          gain: 1
+          sampler:
+            type: OPEN_SIMPLEX_2
+            frequency: 0.0005

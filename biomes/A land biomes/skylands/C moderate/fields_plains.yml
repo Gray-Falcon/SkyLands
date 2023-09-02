@@ -1,0 +1,31 @@
+id: SKYLANDS_PLAINS
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:plains
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+  third:
+    
+    - OAK_SINGLE
+    - BIRCH_SINGLE
+
+  fourth:
+    - OXEYE_DAISY_PATCH
+    - CORNFLOWER_PATCH
+    - AZURE_BLUET_PATCH
+    - GRASS
+    - SEAGRASS
+
+tags:
+  - UNDEREGROUND_FROZEN

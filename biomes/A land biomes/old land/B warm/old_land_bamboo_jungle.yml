@@ -1,0 +1,19 @@
+id: OLD_LAND_BAMBOO_JUNGLE
+type: BIOME
+extends: [ BAMBOO_JUNGLE, OLD_LAND_CRACKED, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - BAMBOO_JUNGLE: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

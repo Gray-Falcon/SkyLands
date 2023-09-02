@@ -1,0 +1,29 @@
+id: THICC_ICICLE
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 2588
+  threshold: 0.02
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SOLID
+        offset: 1
+      - type: MATCH_SOLID
+        offset: 3
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: thicc_icicle

@@ -1,0 +1,12 @@
+id: IRON_ORE_SMALL
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:iron_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_iron_ore
+
+size: 5
+
+exposed: 0.2

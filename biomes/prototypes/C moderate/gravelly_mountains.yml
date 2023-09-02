@@ -1,0 +1,20 @@
+id: GRAVELLY_MOUNTAINS
+type: BIOME
+abstract: true
+vanilla: minecraft:windswept_gravelly_hills
+
+palette:
+  - STONE_GRAVEL: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - IRON_ORE_EXTRA
+  prototype1:
+    - GRASS

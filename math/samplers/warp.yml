@@ -1,0 +1,15 @@
+samplers:
+  SimplexWarp2D:
+    dimensions: 2
+    type: PROBABILITY
+    sampler:
+      type: DOMAIN_WARP
+      amplitude: 2
+      warp:
+        type: OPEN_SIMPLEX_2
+        salt: 9123
+        frequency: 0.01
+      sampler:
+        type: OPEN_SIMPLEX_2
+        salt: 4812
+        frequency: 0.005

@@ -1,0 +1,10 @@
+id: IMMERSION_ERODED
+type: BIOME
+extends: [ IMMERSION, CARVING ]
+vanilla: minecraft:stony_peaks
+
+palette:
+  - IMMERSION_FOSSIL: 319
+
+features:
+  first:

@@ -1,0 +1,21 @@
+id: OLD_LAND_PLAINS
+type: BIOME
+extends: [ PLAINS, OLD_LAND_FLAT, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    - CONTAIN_FLOATING_WATER2
+
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

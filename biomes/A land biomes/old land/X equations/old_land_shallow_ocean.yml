@@ -1,0 +1,15 @@
+id: OLD_LAND_SHALLOW_OCEAN
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: LINEAR_HEIGHTMAP
+    base: 50
+  sampler-2d:
+    dimensions: 2
+    type: EXPRESSION
+    variables:
+      height: 10
+    expression: "|Simplex2D(x/2, z/2)| * height"

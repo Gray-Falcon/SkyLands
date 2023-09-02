@@ -1,0 +1,69 @@
+num x = 0;
+num z = 0;
+
+for (num y = -5; y < 5; y = y + 1) {
+
+    for (num i = -5; i < 5; i = i + 1) {
+        if (getBlock(i, y, 0) != "minecraft:deepslate") {
+            x = 1000;
+        }
+    }
+
+
+    for (num j = -5; j < 5; j = j + 1) {
+        if (getBlock(0, y, j) != "minecraft:deepslate") {
+            z = 1000;
+        }
+    }
+
+}
+
+num rgn = -1;
+str rot = "NONE";
+
+if (z < 1000 && getBlock(0, 0, 8) == "minecraft:air" && getBlock(0, 0, -8) == "minecraft:air") {
+    rot = "NONE";
+    rgn = randomInt(10);
+    if (x < 1000 && getBlock(8, 0, 0) == "minecraft:air" && getBlock(-8, 0, 0) == "minecraft:air") {
+        fail;
+    }
+}
+if (x < 1000 && getBlock(8, 0, 0) == "minecraft:air" && getBlock(-8, 0, 0) == "minecraft:air") {
+    rot = "CCW_90";
+    rgn = randomInt(10);
+    if (z < 1000 && getBlock(0, 0, 8) == "minecraft:air" && getBlock(0, 0, -8) == "minecraft:air") {
+        fail;
+    }
+}
+
+if (rgn == 1) {
+    structure(0, 0, 0, "tentacle_fossil1", rot);
+}
+if (rgn == 2) {
+    structure(0, 0, 0, "tentacle_fossil2", rot);
+}
+if (rgn == 3) {
+    structure(0, 0, 0, "tentacle_fossil3", rot);
+}
+if (rgn == 4) {
+    structure(0, 0, 0, "tentacle_fossil4", rot);
+}
+if (rgn == 5) {
+    structure(0, 0, 0, "tentacle_fossil5", rot);
+}
+
+if (rgn == 6) {
+    structure(0, 0, 0, "diamond_tentacle_fossil1", rot);
+}
+if (rgn == 7) {
+    structure(0, 0, 0, "diamond_tentacle_fossil2", rot);
+}
+if (rgn == 8) {
+    structure(0, 0, 0, "diamond_tentacle_fossil3", rot);
+}
+if (rgn == 9) {
+    structure(0, 0, 0, "diamond_tentacle_fossil4", rot);
+}
+if (rgn == 10) {
+    structure(0, 0, 0, "diamond_tentacle_fossil5", rot);
+}

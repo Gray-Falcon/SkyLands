@@ -1,0 +1,16 @@
+id: OLD_LAND_SWAMP
+type: BIOME
+extends: [ SWAMP, OLD_LAND_CRACKED, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

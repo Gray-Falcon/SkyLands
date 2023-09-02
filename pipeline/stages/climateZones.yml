@@ -1,0 +1,48 @@
+variation-map: &variation-map
+  dimensions: 2
+  type: CELLULAR
+  return: CellValue
+  frequency: 1 / 800
+
+stages:
+  - type: REPLACE_LIST
+    sampler: *variation-map
+    default-from: old_land
+    default-to:
+      - old_land_tropical: 1
+      - old_land_warm: 1
+      - old_land_moderate: 2
+      - old_land_cold: 1
+      - old_land_polar: 2
+      - old_land_cold: 1
+      - old_land_moderate: 1
+      - old_land_tropical: 1
+    to:
+
+      aeropelago:
+        - aeropelago_moderate: 1 # splits to thicc and normal
+        - aeropelago_eroded: 2
+
+      immersion:
+        - immersion: 3
+        #- IMMERSION_VOID: 1
+        - immersion_used_to_be: 3
+        #- IMMERSION_VOID: 1
+        - immersion_dense: 3
+        #- IMMERSION_VOID: 1
+
+      fields:
+        - fields_tropical: 1
+        - fields_warm: 1
+        - fields_moderate: 1
+        - fields_cold: 1
+        - fields_polar: 1
+
+      darkland:
+        - darkland_cold: 1
+        - darkland_polar: 1
+
+      molten:
+        - molten_warm: 1
+        - molten_moderate: 1
+        #- molten_polar: 1

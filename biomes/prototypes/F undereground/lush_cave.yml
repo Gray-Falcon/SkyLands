@@ -1,0 +1,34 @@
+id: LUSH_CAVE
+type: BIOME
+abstract: true
+vanilla: minecraft:lush_caves
+
+palette:
+  - LUSH_CAVE: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  first:
+    - CAVE_LAKE_0
+    - CAVE_LAKE_50
+    - SANDY_WATER_POOLS
+  second:
+    - GREAT_AZALEA_TREES
+    - CONTAIN_FLOATING_WATER
+  third:
+    - LARGE_LEAF_VINES_UNDERGROUND
+    - MOSS_CARPET
+    - CAVE_GLOW_BERRIES
+    - CAVE_SPORE_BLOSSOMS
+    - SMALL_DRIPLEAF_CAVES
+    - BIG_DRIPLEAF_CAVES
+    - GRASS_CAVES
+    - AZALEA_BLOCK
+    - FLOWERING_AZALEA_BLOCK
+    - GLOW_LICHEN

@@ -1,0 +1,26 @@
+id: OLD_LAND_STONE_OVERHANGS
+type: BIOME
+extends: [ TAIGA, OLD_LAND_OVERHANGS, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - COBBLE_CLIFFS: 319
+  - TAIGA: 74
+  - OCEAN_FLOOR_DIRT: 63
+
+slant:
+  - threshold: 6
+    palette:
+      - STONE: 319
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

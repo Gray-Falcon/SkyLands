@@ -1,0 +1,17 @@
+id: GRAVELLY_MOUNTAINS
+
+type: PALETTE
+
+layers:
+  - materials: 
+    - minecraft:gravel: 2
+    - minecraft:stone: 3
+    layers: 5
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.1
+      salt: 478
+  - materials: 
+    - minecraft:stone: 1
+    layers: 1
+

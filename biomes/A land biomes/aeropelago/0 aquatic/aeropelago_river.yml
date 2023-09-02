@@ -1,0 +1,19 @@
+id: AEROPELAGO_RIVER
+type: BIOME
+extends: [ RIVER, EQ_AEROPELAGO_RIVER, AEROPELAGO ]
+
+ocean:
+  palette: WATER6
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    
+  temporary: 
+    - CONTAIN_FLOATING_WATER_FROSTED_ICE
+    - TORCH
+
+tags:
+  - USE_AEROPELAGO_RIVER2
+

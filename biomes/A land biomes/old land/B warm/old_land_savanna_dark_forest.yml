@@ -1,0 +1,26 @@
+id: OLD_LAND_SAVANNA_DARK_FOREST
+type: BIOME
+extends: [ OLD_LAND_HILLS, OLD_LAND_CARVING_MOUNTAINS ]
+vanilla: minecraft:savanna
+
+palette:
+  - PLAINS: 319
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    
+  second:
+    - CONTAIN_FLOATING_WATER
+  third:
+    - DARK_ACACIA_FOREST
+  fourth:
+    - LILAC_PATCH
+    - GRASS
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

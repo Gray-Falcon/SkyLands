@@ -1,0 +1,12 @@
+id: COAL_ORE
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:coal_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_coal_ore
+
+size: 16
+
+exposed: 0.2

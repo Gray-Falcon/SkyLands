@@ -1,0 +1,22 @@
+id: MOLTEN_MIXED_FOREST
+type: BIOME
+extends: [ OAK_FOREST, MOLTEN, CARVING ]
+
+ocean:
+  palette: WATER20
+  level: 115
+
+palette:
+  - MOSSY_MOUNTAINS: 319
+  - PLAINS: 170
+  - CLAY_GRASS: 115
+  - DEEPSLATE: 100
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - BIRCH_FOREST
+    - WEB_VINES_OAK
+    - SEAGRASS

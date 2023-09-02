@@ -1,0 +1,45 @@
+id: ACACIA_BUSH
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.0025
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: 64
+        max: 255
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:grass_block
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 20
+    warp:
+      type: WHITE_NOISE
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: highSimplex2D(x, z)
+  structures:
+    - acacia_bush: 3
+    - blank: 2

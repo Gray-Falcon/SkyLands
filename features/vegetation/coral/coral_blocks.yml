@@ -1,0 +1,42 @@
+id: CORAL_BLOCKS
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 6785
+  threshold: 0.01
+
+locator:
+  type: PATTERN
+  range:
+    min: 0
+    max: 63
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH
+        block: minecraft:water
+        offset: 0
+      - type: MATCH_SET
+        blocks: $features/vegetation/meta.yml:aquatic-plantable-blocks
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 3
+    warp:
+      type: GAUSSIAN
+    sampler:
+      type: OPEN_SIMPLEX_2
+      frequency: 0.03
+    salt: 9652
+  structures:
+    - BLOCK:minecraft:tube_coral_block: 1
+    - BLOCK:minecraft:brain_coral_block: 1
+    - BLOCK:minecraft:bubble_coral_block: 1
+    - BLOCK:minecraft:fire_coral_block: 1
+    - BLOCK:minecraft:horn_coral_block: 1
+    - blank: 4

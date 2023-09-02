@@ -1,0 +1,23 @@
+id: USED_TO_BE_FOREST
+type: BIOME
+extends: [ IMMERSION_USED_TO_BE ]
+vanilla: minecraft:forest
+
+palette:
+  - IMMERSION: 319
+  - DEEPSLATE: 64
+
+features:
+  first:
+    - BOULDER_STONE
+  second:
+    - OAK_FOREST
+    - BIRCH_SINGLE
+  third:
+    - OAK_BUSH
+  fourth:
+    - PEONY_PATCH
+    - LILAC_PATCH
+    - AZURE_BLUET_PATCH
+    - ALLIUM_PATCH
+    - GRASS

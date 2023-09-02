@@ -1,0 +1,41 @@
+id: BADLANDS
+type: BIOME
+abstract: true
+vanilla: minecraft:badlands
+
+palette:
+  - RED_SAND: 319
+  - BADLANDS: 80
+
+slant-depth: 20
+slant:
+  - threshold: 2.5
+    palette:
+      - RED_SAND: 319
+  - threshold: 6
+    palette:
+      - BLOCK:minecraft:terracotta: 319
+  - threshold: 7
+    palette:
+      - BADLANDS_STRATA: 319
+      - TERRACOTTA_STRATA: 88
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - COPPER_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - COPPER_ORE_EXTRA
+    - GOLD_ORE_EXTRA
+
+  prototype1:
+    - CACTUS
+    - DEAD_BUSH
+    - DEAD_OAK
+    - OAK_BUSH
+    - GRASS

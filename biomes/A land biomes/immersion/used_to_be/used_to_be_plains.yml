@@ -1,0 +1,22 @@
+id: USED_TO_BE_PLAINS
+type: BIOME
+extends: [ IMMERSION_USED_TO_BE ]
+vanilla: minecraft:plains
+
+palette:
+  - IMMERSION: 319
+  - DEEPSLATE: 64
+
+features:
+  first:
+  second:
+
+  third:
+    - OAK_SINGLE
+    - BIRCH_SINGLE
+    - OAK_BUSH
+  fourth:
+    - OXEYE_DAISY_PATCH
+    - CORNFLOWER_PATCH
+    - AZURE_BLUET_PATCH
+    - GRASS

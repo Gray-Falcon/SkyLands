@@ -1,0 +1,26 @@
+id: OLD_LAND_HIGHLANDS
+type: BIOME
+abstract: true
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      max(
+        if(y<0,
+          Simplex3D(x,y,z)-(|y-40|/20),
+          if(y>64,
+            Simplex3D(x,y,z)-(|y-64|/20),
+            Simplex3D(x,y,z)
+          )
+        ),
+        if(y<+40,
+          Simplex3D(z,y,x)-(|y+40|/20),
+          if(y>74,
+            Simplex3D(z,y,x)-(|y-74|/20),
+            Simplex3D(z,y,x)
+          )
+        )
+      )
+

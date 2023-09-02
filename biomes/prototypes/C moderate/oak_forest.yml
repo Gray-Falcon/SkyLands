@@ -1,0 +1,26 @@
+id: OAK_FOREST
+type: BIOME
+abstract: true
+vanilla: minecraft:forest
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BOULDER_MOSSY
+    - BOULDER_STONE
+    - OAK_FOREST
+    - LARGE_OAK_SINGLE
+    - PEONY_PATCH
+    - LILAC_PATCH
+    - AZURE_BLUET_PATCH
+    - ALLIUM_PATCH
+    - GRASS

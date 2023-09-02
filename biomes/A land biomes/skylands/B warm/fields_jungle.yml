@@ -1,0 +1,30 @@
+id: SKYLANDS_JUNGLE
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:jungle
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    
+  third:
+    - CONTAIN_FLOATING_WATER2
+    - JUNGLE_FOREST
+  fourth:
+    - PEONY_PATCH
+    - MELON
+    - PUMPKIN
+    - GRASS
+    - VINES
+    - SEAGRASS
+
+tags:
+  - UNDEREGROUND_FROZEN

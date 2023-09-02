@@ -1,0 +1,10 @@
+id: IMMERSION_SILENCE
+type: BIOME
+extends: [ IMMERSION ]
+vanilla: minecraft:stony_peaks
+
+palette:
+  - IMMERSION_FOSSIL: 319
+
+features:
+  first:

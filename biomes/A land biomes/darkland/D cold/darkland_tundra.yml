@@ -1,0 +1,3 @@
+id: DARKLAND_TUNDRA
+type: BIOME
+extends: [ TUNDRA, DARKLAND, CARVING ]

@@ -1,0 +1,31 @@
+id: RIME_SPIKE
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 21
+  padding: 1
+  salt: 815
+
+
+locator:
+  type: AND
+  locators:
+    - type: PATTERN
+      range: &range
+        min: -50
+        max: 200
+      pattern:
+        type: MATCH_SOLID
+        offset: 0
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_AIR
+        offset: 2
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: rime_spike
+  

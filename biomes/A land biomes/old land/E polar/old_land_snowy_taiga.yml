@@ -1,0 +1,19 @@
+id: OLD_LAND_SNOWY_TAIGA
+type: BIOME
+extends: [ SNOWY_TAIGA, OLD_LAND_HILLS, OLD_LAND_CARVING ]
+
+ocean:
+  palette: FROZEN_OCEAN
+  level: 64
+
+palette:
+  - TAIGA: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_FROZEN_RIVER

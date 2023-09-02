@@ -1,0 +1,12 @@
+id: OVERWRITE_BASE
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:stone
+  - minecraft:deepslate
+  - minecraft:andesite
+  - minecraft:diorite
+  - minecraft:granite
+  - minecraft:cobblestone
+  - minecraft:sandstone

@@ -1,0 +1,33 @@
+samplers:
+
+
+
+  highWhite2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: WHITE_NOISE
+      frequency: 1
+  White2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: WHITE_NOISE
+      frequency: 0.05
+  lowWhite2D:
+    dimensions: 2
+    type: FBM
+    seed: 999
+    sampler:
+      type: WHITE_NOISE
+      frequency: 0.0001
+
+  White3D:
+    dimensions: 3
+    type: FBM
+    seed: 999
+    sampler:
+      type: WHITE_NOISE
+      frequency: 0.05

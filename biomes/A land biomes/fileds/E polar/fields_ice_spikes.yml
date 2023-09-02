@@ -1,0 +1,12 @@
+id: FIELDS_ICE_SPIKES
+type: BIOME
+extends: [ ICE_SPIKES, FIELDS_HILLS ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+
+tags:
+  - UNDEREGROUND_FROZEN

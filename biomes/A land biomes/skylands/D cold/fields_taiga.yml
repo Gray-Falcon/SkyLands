@@ -1,0 +1,28 @@
+id: SKYLANDS_TAIGA
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:taiga
+
+palette:
+  - TAIGA: 319
+  - OCEAN_FLOOR_DIRT: 63
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - ROCK_MOSSY
+  third:
+    - SPRUCE_FOREST
+  fourth:
+    - BERRY_BUSH
+    - POPPY_PATCH
+    - GRASS
+    - SEAGRASS
+
+tags:
+  - UNDEREGROUND_FROZEN

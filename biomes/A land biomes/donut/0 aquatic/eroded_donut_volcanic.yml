@@ -1,0 +1,10 @@
+id: ERODED_DONUT_VOLCANIC
+type: BIOME
+extends: [ PLAINS, DONUT_ERODED ]
+
+palette:
+  - DONUT_VOLCANIC: 319
+
+features:
+  first:
+    #todo

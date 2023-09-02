@@ -1,0 +1,25 @@
+id: TORCH
+type: FEATURE
+
+distributor:
+  type: "YES"
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 319
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH
+        block: minecraft:frosted_ice
+        offset: -1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: BLOCK:minecraft:torch
+      

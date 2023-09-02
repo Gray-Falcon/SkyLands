@@ -1,0 +1,25 @@
+id: AEROPELAGO_FROZEN_MOUNTAINS
+type: BIOME
+extends: [ MOUNTAINS, AEROPELAGO_THICC, CARVING ]
+vanilla: minecraft:stony_peaks
+
+palette:
+  - PLAINS: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    
+  second:
+    - CONTAIN_FLOATING_WATER_ICE
+    - SEAGRASS
+  third:
+    - LILY_OF_THE_VALLEY_PATCH
+    - DANDELION_PATCH
+    - ICICLE
+    - SNOW
+  fourth:
+
+tags:
+  - AEROPELAGO_VANILLA_CAVES
+  - USE_AEROPELAGO_FROZEN_RIVER

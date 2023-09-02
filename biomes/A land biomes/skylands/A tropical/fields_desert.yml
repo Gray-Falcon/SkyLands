@@ -1,0 +1,18 @@
+id: SKYLANDS_DESERT
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:desert
+
+palette:
+  - SAND: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - CACTUS
+    - DEAD_BUSH
+
+tags:
+  - UNDEREGROUND_FROZEN

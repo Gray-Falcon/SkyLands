@@ -1,0 +1,44 @@
+stages:
+  - type: REPLACE
+    from: BORDER_BIOMES
+    to:
+      - VOID: 1 
+      - DONUT_PLAINS_LOW: 1
+      - MOLTEN_PLAINS: 1
+      - VOID: 1
+      - VOID: 1
+      - VOID: 1
+      - VOID: 1
+      - OLD_LAND_HIGHLANDS_PLAINS: 1
+    
+    sampler:
+      dimensions: 2
+      type: EXPRESSION
+      expression:
+        if(noise2(x,z)>simplex(x,z)*0.2+0.2,-1,noise(x,z))
+
+      samplers:
+        noise:
+          type: LINEAR
+          dimensions: 2
+          max: 1
+          min: -1
+          sampler:
+            type: CELLULAR
+            dimensions: 2
+            frequency: 1/1000
+            return: CellValue
+        noise2:
+          type: LINEAR
+          dimensions: 2
+          max: 1
+          min: -2
+          sampler:
+            type: CELLULAR
+            dimensions: 2
+            frequency: 1/1000
+            return: Distance2Div
+        simplex:
+          type: OPEN_SIMPLEX_2
+          dimensions: 2
+          frequency: 0.002

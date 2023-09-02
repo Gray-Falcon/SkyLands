@@ -1,0 +1,23 @@
+id: USED_TO_BE_TAIGA
+type: BIOME
+extends: [ IMMERSION_USED_TO_BE ]
+vanilla: minecraft:taiga
+
+palette:
+  - TAIGA: 319
+  - IMMERSION: 84
+  - DEEPSLATE: 64
+
+features:
+  first:
+    - BOULDER_MOSSY
+    - ROCK_MOSSY
+  second:
+    - WEB_VINES_SPRUCE
+  third:
+    - SPRUCE_FOREST
+
+  fourth:
+    - BERRY_BUSH
+    - POPPY_PATCH
+    - GRASS

@@ -1,0 +1,37 @@
+id: DONUT
+type: BIOME
+abstract: true 
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    expression:
+      if(trashold(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) * (400000 - 50000 + 1)<1,-1,
+      
+        -|kleinTorus(
+          (x-100-(floor(x / gridSize) * gridSize)),
+          y-70-(noise(x/700,z/700)*80),
+          (z-100-(floor(z / gridSize) * gridSize)),
+          60,
+
+        0.5 + floor(
+        noise(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) *
+        ((0.5 - 4.5) / 0.5 + 1)) * 0.5,
+
+        30)|
+        
+        + (noise(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize)+0.9)/2 * 700000
+      )
+
+    variables:
+      gridSize: 250
+    samplers:
+      noise:
+        dimensions: 2
+        type: OPEN_SIMPLEX_2
+        frequency: 1
+      trashold:
+        dimensions: 2
+        frequency: 0.1
+        type: WHITE_NOISE
+        seed: 111

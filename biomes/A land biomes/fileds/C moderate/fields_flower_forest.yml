@@ -1,0 +1,12 @@
+id: FIELDS_FLOWER_FOREST
+type: BIOME
+extends: [ FLOWER_FOREST, FIELDS_HILLS ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+
+tags:
+  - UNDEREGROUND_FROZEN

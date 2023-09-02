@@ -1,0 +1,4 @@
+num rgn = 1+randomInt(4);
+for(num i = 0; i <= rgn; i = i + 1) {
+    if(check(0,1,0) != "minecraft:air") block(0,-i,0,"minecraft:ice");
+}

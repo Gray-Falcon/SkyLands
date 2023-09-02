@@ -1,0 +1,10 @@
+id: WATER20
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:water: 1
+    layers: 20
+  - materials:
+      - minecraft:air: 1
+    layers: 1

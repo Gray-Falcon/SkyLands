@@ -1,0 +1,20 @@
+id: AEROPELAGO_VOID
+type: BIOME
+extends: [ AEROPELAGO ]
+vanilla: minecraft:the_void
+
+palette:
+  - AIR: 319
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+
+  temporary: 
+    - CONTAIN_FLOATING_WATER_FROSTED_ICE
+    - TORCH
+
+
+tags:
+  - USE_AEROPELAGO_RIVER
+  - USE_AEROPELAGO_RIVER2

@@ -1,0 +1,26 @@
+id: SKYLANDS_SNOWY_TAIGA
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:snowy_plains
+
+palette:
+  - TAIGA: 319
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - ROCK_MOSSY
+  third:
+    - SPRUCE_FOREST
+
+  fourth:
+    - BERRY_BUSH
+    - SNOW
+
+tags:
+  - UNDEREGROUND_FROZEN

@@ -1,0 +1,10 @@
+num counter=0;
+for (num i = 0; i <= 14; i = i + 1) {
+    if (getBlock(0,-i,0) != "minecraft:air" )counter=counter+1;
+}
+
+if(counter>0){
+    for (num i = 0; i <= 14; i = i + 1) {
+        block(0,-i,0, "minecraft:lava", false);
+    }
+}

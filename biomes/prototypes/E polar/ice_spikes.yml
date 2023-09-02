@@ -1,0 +1,32 @@
+id: ICE_SPIKES
+type: BIOME
+abstract: true
+vanilla: minecraft:ice_spikes
+
+palette:
+  - TAIGA: 319
+
+slant:
+  - threshold: 3
+    palette:
+      - COARSE_DIRT: 319
+  - threshold: 3.5
+    palette:
+      - BLOCK:minecraft:stone: 319
+
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+
+    - LAPIS_ORE_EXTRA
+  prototype1:
+    - BOULDER_ICE
+    - ICE_SPIKES
+    #- VANILLA_ICE_SPIKES
+    - SNOW

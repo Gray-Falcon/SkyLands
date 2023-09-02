@@ -1,0 +1,15 @@
+id: OLD_LAND_BADLANDS
+type: BIOME
+extends: [ BADLANDS, OLD_LAND_HILLS, OLD_LAND_CARVING ]
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+
+tags:
+  - OLD_LAND_VANILLA_CAVES
+  - USE_OLD_LAND_RIVER

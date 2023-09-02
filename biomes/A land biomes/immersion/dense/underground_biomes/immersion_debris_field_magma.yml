@@ -1,0 +1,18 @@
+id: IMMERSION_DEBRIS_FIELD_MAGMA
+type: BIOME
+extends: [ IMMERSION_DEBRIS ]
+vanilla: minecraft:deep_dark
+
+palette:
+  - DEEPSLATE_MAGMA: 319
+
+features:
+  first:
+    - CAVE_MAGMA_LAKE_20
+  second:
+    - LAVA_POOLS
+  third:
+    - CONTAIN_FLOATING_LAVA
+  fourth:
+    - LAVA_COLUMN
+    - GLOW_LICHEN

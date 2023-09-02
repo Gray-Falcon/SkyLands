@@ -1,0 +1,12 @@
+id: LAPIS_ORE_SMALL
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:lapis_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_lapis_ore
+
+size: 4
+
+exposed: 0.2

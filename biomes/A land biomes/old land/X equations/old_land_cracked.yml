@@ -1,0 +1,31 @@
+id: OLD_LAND_CRACKED
+type: BIOME
+abstract: true
+
+# Flat terrain with large cracks
+
+vars: &variables
+  crackFrequency: 1
+  crackLowerThreshold: -0.3
+  crackUpperThreshold: -0.2
+  crackHeight: -3.5
+  maxBase: 62
+  height: 8
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      if((y<maxBase),
+        1,
+      (Simplex2D(x*2, z*2)+1)/2 * height + lerp(cracks(x*crackFrequency, z*crackFrequency),crackLowerThreshold,0,crackUpperThreshold,1) * crackHeight-|maxBase-y|)
+
+
+    variables: *variables
+    samplers:
+      cracks:
+        dimensions: 2
+        type: CELLULAR
+        return: Distance2Div
+        frequency: 0.04

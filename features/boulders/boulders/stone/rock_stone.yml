@@ -1,0 +1,29 @@
+id: ROCK_STONE
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 20
+      padding: 1
+      salt: 54987
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 111
+          frequency: 0.04
+      threshold: 0.2
+
+locator:
+  type: SURFACE
+  range:
+    min: 60
+    max: 300
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: rock_stone

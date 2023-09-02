@@ -1,0 +1,13 @@
+id: FROZEN_WATER6
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:ice: 1
+    layers: 1
+  - materials:
+      - minecraft:ice: 1
+    layers: 5
+  - materials:
+      - minecraft:air: 1
+    layers: 1

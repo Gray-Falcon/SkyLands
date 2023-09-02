@@ -1,0 +1,10 @@
+id: OCEAN_FLOOR_DIRT
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:dirt: 1
+    layers: 2
+  - materials:
+      - minecraft:stone: 1
+    layers: 1

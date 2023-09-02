@@ -1,0 +1,12 @@
+id: REDSTONE_ORE_SMALL
+type: ORE
+extends: OVERWRITE_BASE
+
+material: minecraft:redstone_ore
+
+material-overrides:
+  minecraft:deepslate: minecraft:deepslate_redstone_ore
+
+size: 4
+
+exposed: 0.2

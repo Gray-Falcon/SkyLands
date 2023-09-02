@@ -1,0 +1,28 @@
+id: SKYLANDS_COBBLESTONE_MOUNTAINS
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:forest
+
+palette:
+  - COBBLE_CLIFFS: 319
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+    - ROCK_MOSSY
+    - ROCK_STONE
+  third:
+    - OAK_BUSH
+
+  fourth:
+    - DEAD_BUSH
+    - GRASS
+
+tags:
+  - UNDEREGROUND_FROZEN
+

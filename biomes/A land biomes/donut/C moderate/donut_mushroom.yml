@@ -1,0 +1,6 @@
+id: DONUT_MUSHROOM
+type: BIOME
+extends: [ MUSHROOM_ISLAND, DONUT ]
+
+features:
+  first:

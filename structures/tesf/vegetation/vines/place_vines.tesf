@@ -1,0 +1,31 @@
+setWaterlog(false);
+
+bool north = false;
+bool south = false;
+bool east = false;
+bool west = false;
+if(getBlock(0, 0, -1) != "minecraft:air" && getBlock(0, 0, -1) != "minecraft:vine"){
+    north = true;
+}
+
+if(getBlock(0, 0, 1) != "minecraft:air" && getBlock(0, 0, 1) != "minecraft:vine"){
+    south = true;
+}
+
+if(getBlock(1, 0, 0) != "minecraft:air" && getBlock(1, 0, 0) != "minecraft:vine"){
+    east = true;
+}
+
+if(getBlock(-1, 0, 0) != "minecraft:air" && getBlock(-1, 0, 0) != "minecraft:vine"){
+    west = true;
+}
+
+if(!(north || south || east || west)) fail;
+
+str vine = "minecraft:vine[north=" + north + ",south=" + south + ",east=" + east + ",west=" + west + "]";
+
+num length = randomInt(6) + 10;
+for (num i = 0; i < length; i = i + 1) {
+    if (getBlock(0, -i, 0) != "minecraft:air") return;
+    block(0, -i, 0, vine, false);
+}

@@ -1,0 +1,30 @@
+id: SKYLANDS
+type: BIOME
+abstract: true 
+
+
+vars: &variables
+  IslandsPosY: 80
+  ElevationRange: 20
+  ElevationSlope: 0.01
+
+
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      ((Simplex(x, z)*10) - 1 - ( |y-(IslandsPosY+(ElevationRange*Simplex(x*ElevationSlope, z*ElevationSlope)))| * 
+      if((y > (IslandsPosY+(ElevationRange*Simplex(x*ElevationSlope, z*ElevationSlope)))), 0.18, 0.11) ))
+
+    variables: *variables
+    samplers:
+      Simplex:
+        dimensions: 2
+        type: FBM
+        octaves: 4
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 111111
+          frequency: 0.0035

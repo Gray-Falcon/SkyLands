@@ -1,0 +1,7 @@
+id: AEROPELAGO_ERODED_WHEATLAND
+type: BIOME
+extends: [ WHEATLAND, AEROPELAGO_ERODED ]
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER

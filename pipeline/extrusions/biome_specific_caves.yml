@@ -1,0 +1,33 @@
+extrusions:
+  - type: REPLACE
+    from: IMMERSION_CAVES
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 1252
+      frequency: 0.001
+    to:
+      - SELF: 3
+      - IMMERSION_DEBRIS_FIELD: 1
+      - IMMERSION_INFECTED_DEBRIS_FIELD: 1
+      - IMMERSION_DEBRIS_FIELD_MAGMA: 1
+
+    range:
+      min: -64
+      max: 70
+
+
+  - type: REPLACE
+    from: UNDEREGROUND_FROZEN
+    sampler:
+      type: CELLULAR
+      return: CellValue
+      salt: 1252
+      frequency: 0.001
+    to:
+      - FROZEN_DEPTHS: 1
+      - FROZEN_DEBRIS: 1
+      - SELF: 4
+    range:
+      min: -64
+      max: 50

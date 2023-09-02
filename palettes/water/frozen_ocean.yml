@@ -1,0 +1,9 @@
+id: FROZEN_OCEAN
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:ice: 1
+    layers: 1
+  - materials: minecraft:water
+    layers: 1

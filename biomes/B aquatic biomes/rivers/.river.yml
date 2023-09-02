@@ -1,0 +1,18 @@
+id: RIVE
+type: BIOME
+extends: [ RIVER, EQ_VOID_RIVER, OLD_LAND_FLAT ]
+vanilla: minecraft:river
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+palette:
+  - PLAINS: 319
+
+
+features:
+  first:
+    - CONTAIN_FLOATING_WATER
+  second:
+    - SUGAR_CANE

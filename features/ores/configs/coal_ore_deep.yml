@@ -1,0 +1,27 @@
+id: COAL_ORE_DEEP
+type: FEATURE
+
+anchors:
+  - &structure
+    COAL_ORE: 1
+  - &densityThreshold 1/256 * ${config/ore_distribution.yml:COAL_ORE_DEEP.averageCountPerChunk}
+  - &salt $config/ore_distribution.yml:COAL_ORE_DEEP.salt
+  - &range $config/ore_distribution.yml:COAL_ORE_DEEP.range
+  - &standard-deviation (${config/ore_distribution.yml:COAL_ORE_DEEP.range.max}-${config/ore_distribution.yml:COAL_ORE_DEEP.range.min})/6
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: *salt
+  threshold: *densityThreshold
+
+locator:
+  type: GAUSSIAN_RANDOM
+  amount: 1
+  height: *range
+  standard-deviation: *standard-deviation
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: *structure

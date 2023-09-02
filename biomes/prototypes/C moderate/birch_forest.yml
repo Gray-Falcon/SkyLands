@@ -1,0 +1,24 @@
+id: BIRCH_FOREST
+type: BIOME
+abstract: true
+vanilla: minecraft:birch_forest
+
+palette:
+  - PLAINS: 319
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - BIRCH_FOREST
+    - LARGE_BIRCH_SINGLE
+    - ROSE_BUSH_PATCH
+    - LILAC_PATCH
+    - CORNFLOWER_PATCH
+    - ALLIUM_PATCH
+    - GRASS

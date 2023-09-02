@@ -1,0 +1,24 @@
+id: FROZEN_RIVER
+type: BIOME
+abstract: true
+vanilla: minecraft:frozen_river
+
+ocean:
+  palette: FROZEN_OCEAN
+  level: 64
+
+palette:
+  - PLAINS: 319
+  - OCEAN_FLOOR_DIRT: 63
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - SNOW
+    - SEAGRASS

@@ -1,0 +1,41 @@
+id: WHEAT
+
+type: FEATURE
+
+distributor: 
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+  threshold: 0.8
+
+locator: 
+  type: PATTERN
+  range:
+    min: -64
+    max: 318
+  pattern:
+    type: AND
+    patterns: 
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:grass_block
+          - minecraft:dirt
+          - minecraft:coarse_dirt
+          - minecraft:podzol
+        offset: -1
+
+structures:
+  distribution:
+    type: DOMAIN_WARP
+    amplitude: 10
+    warp:
+      type: WHITE_NOISE
+      salt: 8808080808
+    sampler:
+      type: EXPRESSION
+      expression: highSimplex2D(x, z)
+  structures:
+    - wheat: 3
+    - blank: 2

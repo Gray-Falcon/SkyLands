@@ -1,0 +1,111 @@
+id: DONUT_VOLCANIC
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:deepslate: 1
+      - minecraft:stone: 1
+    layers: 3
+    sampler: &noise
+      dimensions: 2
+      type: DOMAIN_WARP
+      amplitude: 1
+      warp:
+        type: WHITE_NOISE
+      sampler:
+        type: FBM
+        octaves: 3
+        salt: 23424
+        sampler:
+          type: OPEN_SIMPLEX_2
+  - materials:
+      - minecraft:deepslate: 1
+      - minecraft:magma_block: 1
+    layers: 2
+
+
+
+    sampler:
+      dimensions: 2
+      type: EXPRESSION
+      expression:
+        if(trashold(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) * (400000 - 50000 + 1)<1,-1,
+        
+          -|kleinTorus(
+            (x-100-(floor(x / gridSize) * gridSize)),
+            y-70-(noise(x/700,z/700)*80),
+            (z-100-(floor(z / gridSize) * gridSize)),
+            60,
+
+          0.5 + floor(
+          noise(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) *
+          ((0.5 - 4.5) / 0.5 + 1)) * 0.5,
+
+          30)|
+          
+          + (noise(x/100,z/100)+0.35)/2 * 850000
+        )
+      
+      variables:
+        gridSize: 250
+      samplers:
+        noise:
+          dimensions: 2
+          type: OPEN_SIMPLEX_2
+          frequency: 1
+        trashold:
+          dimensions: 2
+          frequency: 1 #lover frequency = less donuts
+          type: WHITE_NOISE
+          seed: 111
+
+
+
+  - materials:
+      - minecraft:magma_block: 1
+      - minecraft:lava: 1
+    layers: 5
+    sampler:
+      dimensions: 2
+      type: EXPRESSION
+      expression:
+        if(trashold(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) * (400000 - 50000 + 1)<1,-1,
+        
+          -|kleinTorus(
+            (x-100-(floor(x / gridSize) * gridSize)),
+            y-70-(noise(x/700,z/700)*80),
+            (z-100-(floor(z / gridSize) * gridSize)),
+            60,
+
+          0.5 + floor(
+          noise(floor(x / gridSize) * gridSize,floor(z / gridSize) * gridSize) *
+          ((0.5 - 4.5) / 0.5 + 1)) * 0.5,
+
+          30)|
+          
+          + (noise(x/100,z/100)+0.35)/2 * 55000
+        )
+      
+      variables:
+        gridSize: 250
+      samplers:
+        noise:
+          dimensions: 2
+          type: OPEN_SIMPLEX_2
+          frequency: 1
+        trashold:
+          dimensions: 2
+          frequency: 1 #lover frequency = less donuts
+          type: WHITE_NOISE
+          seed: 111
+
+
+
+  - materials:
+      - minecraft:deepslate: 1
+      - minecraft:stone: 1
+    layers: 1
+    sampler: *noise
+
+
+

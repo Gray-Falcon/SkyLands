@@ -1,0 +1,31 @@
+id: PALM_BEACH
+type: BIOME
+abstract: true
+vanilla: minecraft:warm_ocean
+
+palette:
+  - PALM_BEACH: 319
+  - OCEAN_FLOOR_SAND: 63
+
+ocean:
+  palette: BLOCK:minecraft:water
+  level: 64
+
+features:
+  ores:
+    - COAL_ORE
+    - IRON_ORE
+    - GOLD_ORE_DEEP
+    - LAPIS_ORE_DEEP
+    - REDSTONE_ORE_DEEP
+    - DIAMOND_ORE_DEEP
+  prototype1:
+    - PALM_FOREST
+    - CORAL_BLOCKS
+    - LILY_OF_THE_VALLEY_PATCH
+    - SUGAR_CANE
+    - MELON
+    - GRASS
+    - CORAL_FANS
+    - SEA_PICKLES
+    - SEAGRASS

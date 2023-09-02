@@ -1,0 +1,21 @@
+id: SAND
+type: PALETTE
+
+layers:
+  - materials:
+      - minecraft:sand: 1
+    layers: 3
+  - materials:
+      - minecraft:sand: 2
+      - minecraft:sandstone: 3
+    layers: 1
+  - materials:
+      - minecraft:sandstone: 1
+    layers: 2
+  - materials:
+      - minecraft:stone: 1
+    layers: 1
+sampler:
+  type: OPEN_SIMPLEX_2
+  frequency: 0.2
+  salt: 42

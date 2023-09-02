@@ -1,0 +1,31 @@
+id: OLD_LAND_ERODED_LOW
+type: BIOME
+abstract: true
+
+vars: &variables
+  maxBase: 62
+  upper: 10
+  lower: 25
+  maximum: 80
+  mid: 70
+  minimum: 62
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression:
+      max(
+        -y + maxBase,
+      (SimplexWarp2D(x, z)*upper-|maxBase-y|)
+        -|erosion(x,y/3,z)|
+        * 100
+        * max(0, min((y-minimum)/(mid-minimum),(y-maximum)/(mid-maximum))))
+      -(Simplex2D(x,z))
+
+
+    variables: *variables
+    samplers:
+      erosion:
+        dimensions: 3
+        type: OPEN_SIMPLEX_2
+        frequency: 0.03

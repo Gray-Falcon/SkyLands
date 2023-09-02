@@ -1,0 +1,32 @@
+id: SKYLANDS_PALM_BEACHES
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:warm_ocean
+
+palette:
+  - PALM_BEACHES: 319
+  - OCEAN_FLOOR_SAND: 63
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+    
+  second:
+    - CONTAIN_FLOATING_WATER2
+  third:
+    - PALM_FOREST
+    - CORAL_BLOCKS
+    - LILY_OF_THE_VALLEY_PATCH
+    - SANDY_WATER_POOLS
+  fourth:
+    - SUGAR_CANE
+    - MELON
+    - GRASS
+    - CORAL_FANS
+    - SEA_PICKLES
+    - SEAGRASS
+tags:
+  - UNDEREGROUND_FROZEN

@@ -1,0 +1,28 @@
+id: SKYLANDS_FLOWER_FOREST
+type: BIOME
+extends: [ SKYLANDS ]
+vanilla: minecraft:forest
+
+palette:
+  - PLAINS: 319
+ocean:
+  palette: WATER20
+  level: 64
+
+features:
+  first:
+    - REMOVE_FLOATING_WATER
+  second:
+    - CONTAIN_FLOATING_WATER2
+  third:
+    - OAK_SINGLE
+    - LARGE_OAK_SINGLE
+    - BIRCH_SINGLE
+    - LARGE_BIRCH_SINGLE
+
+  fourth:
+    - MIXED_FLOWER_COVER
+    - GRASS
+
+tags:
+  - UNDEREGROUND_FROZEN

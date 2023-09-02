@@ -1,0 +1,31 @@
+id: LONG_ICICLE
+type: FEATURE
+
+distributor:
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 2588
+  threshold: 0.2
+
+locator:
+  type: PATTERN
+  range:
+    min: -63
+    max: 318
+  pattern:
+    type: AND
+    patterns:
+      - type: MATCH_AIR
+        offset: 0
+      - type: MATCH_SET
+        blocks:
+          - minecraft:ice
+          - minecraft:blue_ice
+          - minecraft:packed_ice
+        offset: 1
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: long_icicle

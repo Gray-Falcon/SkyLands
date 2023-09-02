@@ -1,0 +1,21 @@
+id: IMMERSION_FROZEN
+type: BIOME
+extends: [ IMMERSION_DENSE ]
+vanilla: minecraft:frozen_peaks
+
+palette:
+  - IMMERSION_FOSSIL: 319
+
+features:
+  first:
+
+  second:
+    - THICC_ICICLE
+
+  third:
+    - SNOW
+
+  fourth:
+
+tags:
+  - IMMERSION_CAVES
