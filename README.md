@@ -5,7 +5,7 @@
 Skylands pack is still in the testing stage, and balancing issues and bugs may be prevalent. As long as this warning is still here, this pack is not completed yet.
 
 ## Demo world
-You can download singleplayer friendly, pregenerated 10k world from here: https://www.mediafire.com/folder/l0qyiwnhmysj0/1.19.4_SkyLands_1.0
+You can download singleplayer friendly, pregenerated 10k world from here: comming soon
 
 
 ## Credits
