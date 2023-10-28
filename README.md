@@ -5,7 +5,7 @@
 Skylands pack is still in the testing stage, and balancing issues and bugs may be prevalent. As long as this warning is still here, this pack is not completed yet.
 
 ## Demo world
-You can download singleplayer friendly, pregenerated 10k world from here: comming soon
+You can download singleplayer friendly, pregenerated 10k world from here: coming soon
 
 
 ## Credits
@@ -15,7 +15,7 @@ Skylands was made possible only through the help and support from the Polyhedral
 ID of SkyLands is SKYLANDS . You can see how to install this pack in this VIDEO >>> https://www.youtube.com/watch?v=-PqtdgBclx4
 
 ## Bugs and Features
-Im hardly working on this!
+I'm hardly working on this!
 
 ## SkyLands Discord
 https://discord.gg/99DUces7Gh
